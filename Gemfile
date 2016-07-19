@@ -27,6 +27,9 @@ gem 'simple_form'
 gem 'font-awesome-sass'
 gem 'slim-rails'
 gem 'high_voltage', github: 'thoughtbot/high_voltage'
+
+gem 'dropzonejs-rails'
+
 gem 'carrierwave'
 gem 'carrierwave-qiniu', '~> 0.2.1'
 gem 'status-page'

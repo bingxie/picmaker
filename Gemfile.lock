@@ -108,6 +108,8 @@ GEM
     concurrent-ruby (1.0.2)
     connection_pool (2.2.0)
     debug_inspector (0.0.2)
+    dropzonejs-rails (0.7.3)
+      rails (> 3.1)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.14)
@@ -318,6 +320,7 @@ DEPENDENCIES
   carrierwave-qiniu (~> 0.2.1)
   coffee-rails (~> 4.2)
   connection_pool
+  dropzonejs-rails
   figaro
   font-awesome-sass
   high_voltage!
