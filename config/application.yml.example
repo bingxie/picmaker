@@ -1,0 +1,15 @@
+# Use `rake secret` to generate one key
+SECRET_KEY_BASE: ''
+
+# domain name used by action cable
+DOMAIN: ''
+PROTOCOL: http
+
+# QINIU set
+QINIU_ACCESS_KEY: ''
+QINIU_SECRET_KEY: ''
+QINIU_BUCKET: ''
+QINIU_BUCKET_DOMAIN: ''
+
+# sidekiq namespace
+SIDEKIQ_NAMESPACE: ''

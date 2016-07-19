@@ -1,0 +1,29 @@
+development:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: picmaker_development
+  pool:     5
+  username: postgres
+  password: postgres
+  template: template0
+
+test:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: picmaker_test
+  pool:     5
+  username: postgres
+  password: postgres
+  template: template0
+
+production:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: picmaker_production
+  pool:     5
+  username: postgres
+  password: postgres
+  template: template0
