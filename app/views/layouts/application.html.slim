@@ -12,6 +12,7 @@ html
       = yield(:title)
     - else
       title picmaker
+    link[href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css']
     = csrf_meta_tags
     = action_cable_meta_tag
     = content_for?(:head) ? yield(:head) : ''
@@ -19,6 +20,6 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = favicon_link_tag "favicon.png"
   body
-    main
-      .container
-        == yield
+    == render 'layouts/nav'
+    .container
+      == yield
