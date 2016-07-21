@@ -1,0 +1,7 @@
+p#notice = notice
+
+p
+  strong Image:
+  = @picture.file_name_identifier
+
+= image_tag(@picture.file_name.url + '?' + @picture.updated_at.to_s)
