@@ -4,12 +4,12 @@ class PicturesController < ApplicationController
   end
 
   def create
-    @picture = Picture.new(params.require(:picture).permit(:file_name))
+    @picture = Picture.new(file_name: params[:file])
 
     respond_to do |format|
       if @picture.save
         format.html { redirect_to @picture, notice: 'Picture was successfully created.' }
-        format.json { render :show, status: :created, location: @picture }
+        format.json { render json: @picture }
       else
         format.html { render :new }
         format.json { render json: @picture.errors, status: :unprocessable_entity }
