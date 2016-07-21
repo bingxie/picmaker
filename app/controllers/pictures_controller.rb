@@ -4,7 +4,7 @@ class PicturesController < ApplicationController
   end
 
   def create
-    @picture = Picture.new(file_name: params[:file])
+    @picture = Picture.new(params.require(:picture).permit(:file_name))
 
     respond_to do |format|
       if @picture.save

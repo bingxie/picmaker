@@ -1,5 +1,13 @@
 class ImageUploader < CarrierWave::Uploader::Base
-  storage :qiniu
+  storage :qiniu if Rails.env.production?
+
+  storage :file if Rails.env.development?
+
+  if Rails.env.development?
+    def store_dir
+      "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    end
+  end
 
   def extension_white_list
     %w(jpg jpeg gif png)
