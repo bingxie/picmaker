@@ -1,4 +1,8 @@
 class PicturesController < ApplicationController
+  def index
+    @pictures = Picture.last 6
+  end
+
   def new
     @picture = Picture.new
   end
