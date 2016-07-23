@@ -1,7 +1,6 @@
 class ImageUploader < CarrierWave::Uploader::Base
-  storage :qiniu if Rails.env.production?
 
-  storage :file if Rails.env.development?
+  process :extract_exif
 
   if Rails.env.development?
     def store_dir
@@ -15,6 +14,12 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   def filename
     "#{secure_token}.#{file.extension}" if original_filename.present?
+  end
+
+  def extract_exif
+    exif = MiniExiftool.new file.file
+    p '----  extract_exif ----'
+    p exif.lens
   end
 
   protected
