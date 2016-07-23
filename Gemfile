@@ -29,6 +29,7 @@ gem 'slim-rails'
 gem 'high_voltage', github: 'thoughtbot/high_voltage'
 
 gem 'dropzonejs-rails'
+gem 'mini_exiftool' # relay on exiftool
 
 gem 'carrierwave'
 gem 'carrierwave-qiniu', '~> 0.2.1'

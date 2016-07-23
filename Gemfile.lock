@@ -157,6 +157,7 @@ GEM
       puma (>= 2.13)
     mina-sidekiq (0.3.1)
       mina
+    mini_exiftool (2.7.6)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     minitest-reporters (1.1.10)
@@ -334,6 +335,7 @@ DEPENDENCIES
   mina-multistage (~> 1.0)
   mina-puma
   mina-sidekiq (~> 0.3.1)
+  mini_exiftool
   minitest-reporters
   mocha
   pg
