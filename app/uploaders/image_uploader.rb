@@ -1,5 +1,4 @@
 class ImageUploader < CarrierWave::Uploader::Base
-
   process :extract_exif
 
   if Rails.env.development?
@@ -17,15 +16,15 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def extract_exif
-    exif = MiniExiftool.new file.file
-    p '----  extract_exif ----'
-    p exif.lens
+    MiniExiftool.new file.file
+    # p '----  extract_exif ----'
+    # p exif.lens
   end
 
   protected
 
   def secure_token
     variable = :"@#{mounted_as}_secure_token"
-    model.instance_variable_get(variable) or model.instance_variable_set(variable, SecureRandom.uuid)
+    model.instance_variable_get(variable) || model.instance_variable_set(variable, SecureRandom.uuid)
   end
 end
