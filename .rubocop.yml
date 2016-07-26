@@ -11,6 +11,9 @@ AllCops:
     - Gemfile
     - Rakefile
 
+Rails:
+  Enabled: true
+
 Style/Documentation:
   Exclude:
     - "app/controllers/*_controller.rb"

@@ -7,24 +7,24 @@ class ImageUploader < CarrierWave::Uploader::Base
     end
   end
 
-  def extension_white_list
-    %w(jpg jpeg gif png)
-  end
-
-  def filename
-    "#{secure_token}.#{file.extension}" if original_filename.present?
-  end
-
   def extract_exif
     MiniExiftool.new file.file
     # p '----  extract_exif ----'
     # p exif.lens
   end
 
-  protected
+  def extension_white_list
+    %w(jpg jpeg gif png)
+  end
 
-  def secure_token
-    variable = :"@#{mounted_as}_secure_token"
-    model.instance_variable_get(variable) || model.instance_variable_set(variable, SecureRandom.uuid)
+  def filename
+    random_filename if super.present?
+  end
+
+  private
+
+  def random_filename
+    @prefix ||= SecureRandom.uuid.delete('-')
+    "#{@prefix}.#{file.extension.downcase}"
   end
 end
