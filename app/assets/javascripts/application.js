@@ -15,4 +15,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require dropzone
+//= require alertify
 //= require_tree .

@@ -37,6 +37,13 @@ $(document).ready(function(){
             appendContent(response.file_name.url, response.id);
           }
 
+          if(acceptedFiles.length != 0) {
+            alertify.success('成功上传了 ' + acceptedFiles.length + ' 张图片。');
+          }
+          if(rejectedFiles.length != 0) {
+            alertify.error('有 ' + rejectedFiles.length + ' 张图片无法上传。请确认图片格式。');
+          }
+
           self.removeAllFiles();
         }, 2000);
       }

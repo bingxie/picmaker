@@ -63,6 +63,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    alertifyjs-rails (1.7.1)
     annotate (2.7.1)
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 12.0)
@@ -327,6 +328,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  alertifyjs-rails
   annotate
   better_errors
   binding_of_caller
