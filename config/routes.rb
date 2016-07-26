@@ -1,6 +1,6 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
-  resources :pictures, only: [:create, :new, :show, :index]
+  resources :pictures, only: [:create, :show, :index]
 
   # writer your routes here
 

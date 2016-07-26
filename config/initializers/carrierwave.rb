@@ -40,7 +40,7 @@ CarrierWave.configure do |config|
   elsif Rails.env.development?
     config.storage :file
   elsif Rails.env.test?
-    config.storage NullStorage
+    # config.storage NullStorage
     config.enable_processing = true
   end
 end

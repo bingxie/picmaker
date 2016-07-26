@@ -11,7 +11,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  file_name: MyString
+  file_name: 0cbd5eec-c8dd-4ef8-af1f-93811c24b480.jpg
 
 two:
-  file_name: MyString
+  file_name: c8d2246c-a5e1-4c54-8085-4402edeeeb74.jpg
