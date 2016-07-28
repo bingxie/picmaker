@@ -13,8 +13,6 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   def extract_exif
     exif = MiniExiftool.new file.file
-    # p '----  extract_exif ----'
-    # p exif.lens
     @exif_string =
       [exif.model, exif.lens, exif.f_number, exif.focal_length, exif.exposure_time, exif.iso].compact.join('   ')
   end

@@ -1,4 +1,15 @@
 $(document).ready(function(){
+  window.selected = 'black';
+  $("#selectable").selectable({
+    selected: function(event, ui) {
+      if (ui.selected.classList.contains('white')) {
+        window.selected = 'white'
+      } else {
+        window.selected = 'black'
+      }
+    }
+  });
+
   // disable auto discover
   Dropzone.autoDiscover = false;
 

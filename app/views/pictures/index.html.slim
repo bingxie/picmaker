@@ -1,13 +1,32 @@
 .row
   .col-lg-12
     .well
+      h4
+        b 选择喜欢的样式
+      #selectable.row
+        .col-lg-6.black.ui-selected
+          .thumbnail
+            = image_tag 'http://fakeimg.pl/530x200'
+          .caption
+            center
+              h4 黑底白字
+        .col-lg-6.white
+          .thumbnail
+            = image_tag 'http://fakeimg.pl/530x200'
+          .caption.center
+            center
+              h4 白底黑字
+
+.row
+  .col-lg-12
+    .well
       == render 'form'
 
 .row
   .col-lg-12
     .well
       h4
-        b Photos
+        b 处理完成的照片
       .row
         #pictures.col-lg-12
           - @pictures.each do |pic|

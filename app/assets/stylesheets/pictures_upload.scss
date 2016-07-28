@@ -4,3 +4,15 @@
   font-size: 2rem;
   font-weight: 700;
 }
+
+.thumbnail {
+  margin-top: 20px;
+}
+
+#selectable .ui-selecting {
+  background: #ccc;
+}
+
+#selectable .ui-selected {
+  background: #999;
+}
