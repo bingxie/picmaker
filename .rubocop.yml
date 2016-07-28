@@ -34,7 +34,9 @@ Style/RedundantSelf:
 
 Metrics/AbcSize:
   Exclude:
+    - "config/initializers/*"
     - "app/controllers/**/*"
+    - "app/uploaders/*"
 
 Style/FrozenStringLiteralComment:
   Enabled: false
