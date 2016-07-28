@@ -1,11 +1,10 @@
 $(document).ready(function(){
-  window.selected = 'black';
   $("#selectable").selectable({
     selected: function(event, ui) {
       if (ui.selected.classList.contains('white')) {
-        window.selected = 'white'
+        $('#picture_border_style').val('white')
       } else {
-        window.selected = 'black'
+        $('#picture_border_style').val('black')
       }
     }
   });

@@ -1,9 +1,2 @@
 = form_for @picture, html: {multipart: true, class: 'dropzone'} do |f|
-  - if @picture.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@picture.errors.count, "error")} prohibited this picture from being saved:"
-      ul
-        - @picture.errors.full_messages.each do |message|
-          li = message
-
-  / .dropzone-previews
+  = f.hidden_field :border_style

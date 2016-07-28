@@ -53,12 +53,12 @@ module CarrierWave
         basic_point = 12 if basic_point < 12
 
         img.combine_options do |c|
-          c.background 'black'
+          c.background model.border_style
           c.gravity 'SouthEast'
           c.splice "0x#{basic_point*2}"
           c.draw "text #{basic_point/2},#{basic_point/2} '#{@exif_string}'"
           c.font 'Helvetica'
-          c.fill 'white'
+          c.fill model.border_style == 'white' ? 'black' : 'white'
           c.pointsize basic_point
         end
         img
