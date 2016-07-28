@@ -56,7 +56,7 @@ module CarrierWave
           c.background model.border_style
           c.gravity 'SouthEast'
           c.splice "0x#{basic_point*2}"
-          c.draw "text #{basic_point/2},#{basic_point/2} '#{@exif_string}'"
+          c.draw "text #{basic_point/2},#{basic_point/2} '#{model.exif_string}'"
           c.font 'Helvetica'
           c.fill model.border_style == 'white' ? 'black' : 'white'
           c.pointsize basic_point

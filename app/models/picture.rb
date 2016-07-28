@@ -10,4 +10,8 @@
 
 class Picture < ApplicationRecord
   mount_uploader :file_name, ImageUploader
+
+  def exif_string
+    [model, lens, f_number, focal_length, exposure_time, iso].compact.join('   ')
+  end
 end
