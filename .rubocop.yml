@@ -35,3 +35,13 @@ Style/RedundantSelf:
 Metrics/AbcSize:
   Exclude:
     - "app/controllers/**/*"
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 12
+  Exclude:
+    - "config/initializers/*"
+    - "db/migrate/*"
+    - "test/**/*"

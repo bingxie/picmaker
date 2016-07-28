@@ -4,7 +4,7 @@ $(document).ready(function(){
 
   var appendContent = function(picUrl, picId) {
     console.log(picId + "  " + picUrl);
-    $("#pictures").append('<div class="col-lg-12">' +
+    $("#pictures").prepend('<div class="col-lg-12">' +
       '<div class="thumbnail"><img src="' + picUrl + '"/>' +
       '<div class="caption">' +
       '<input id="pictures_" name="pictures[]" value="' + picId +'" type="checkbox">' +

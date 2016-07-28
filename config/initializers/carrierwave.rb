@@ -53,7 +53,7 @@ module CarrierWave
           c.background 'black'
           c.gravity 'SouthEast'
           c.splice '0x80'
-          c.draw 'text 20,20 "NIKON D7000   F2.8   1/320s   35mm   ISO-200"'
+          c.draw "text 20,20 '#{@exif_string}'"
           c.font 'Helvetica'
           c.fill 'white'
           c.pointsize 40
