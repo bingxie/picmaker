@@ -44,3 +44,22 @@ CarrierWave.configure do |config|
     config.enable_processing = true
   end
 end
+
+module CarrierWave
+  module MiniMagick
+    def exif_border
+      manipulate! do |img|
+        img.combine_options do |c|
+          c.background 'black'
+          c.gravity 'SouthEast'
+          c.splice '0x80'
+          c.draw 'text 20,20 "NIKON D7000   F2.8   1/320s   35mm   ISO-200"'
+          c.font 'Helvetica'
+          c.fill 'white'
+          c.pointsize 40
+        end
+        img
+      end
+    end
+  end
+end

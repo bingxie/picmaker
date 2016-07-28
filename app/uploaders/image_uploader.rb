@@ -1,5 +1,9 @@
 class ImageUploader < CarrierWave::Uploader::Base
+  include CarrierWave::MiniMagick
+
   process :extract_exif
+
+  process :exif_border
 
   if Rails.env.development?
     def store_dir
