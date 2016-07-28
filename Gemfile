@@ -34,6 +34,7 @@ gem 'mini_exiftool' # relay on exiftool
 
 gem 'carrierwave'
 gem 'carrierwave-qiniu', '~> 0.2.1'
+gem "mini_magick"
 gem 'status-page'
 gem 'redis-namespace'
 gem 'sidekiq'

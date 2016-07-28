@@ -163,6 +163,7 @@ GEM
     mina-sidekiq (0.3.1)
       mina
     mini_exiftool (2.7.6)
+    mini_magick (4.5.1)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     minitest-reporters (1.1.10)
@@ -354,6 +355,7 @@ DEPENDENCIES
   mina-puma
   mina-sidekiq (~> 0.3.1)
   mini_exiftool
+  mini_magick
   minitest-reporters
   mocha
   pg
