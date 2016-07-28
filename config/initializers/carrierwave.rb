@@ -49,14 +49,17 @@ module CarrierWave
   module MiniMagick
     def exif_border
       manipulate! do |img|
+        basic_point = img.dimensions.min/60
+        basic_point = 12 if basic_point < 12
+
         img.combine_options do |c|
           c.background 'black'
           c.gravity 'SouthEast'
-          c.splice '0x80'
-          c.draw "text 20,20 '#{@exif_string}'"
+          c.splice "0x#{basic_point*2}"
+          c.draw "text #{basic_point/2},#{basic_point/2} '#{@exif_string}'"
           c.font 'Helvetica'
           c.fill 'white'
-          c.pointsize 40
+          c.pointsize basic_point
         end
         img
       end
