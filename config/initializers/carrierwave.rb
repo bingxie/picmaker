@@ -48,6 +48,7 @@ end
 module CarrierWave
   module MiniMagick
     def exif_border
+      return if model.exif_string.blank?
       manipulate! do |img|
         basic_point = img.dimensions.min / 60
         basic_point = 12 if basic_point < 12

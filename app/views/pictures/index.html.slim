@@ -26,13 +26,13 @@
   .col-lg-12
     .well
       h4
-        b 处理完成的照片
+        b 处理完成的照片，点击右键保存
       .row
         #pictures.col-lg-12
-          - @pictures.each do |pic|
-            .col-lg-12
-              .thumbnail
-                = image_tag pic.file_name.url
-                .caption
-                  p
-                    = check_box_tag 'pictures[]', pic.id
+          / - @pictures.each do |pic|
+          /   .col-lg-12
+          /     .thumbnail
+          /       = image_tag pic.file_name.url
+          /       .caption
+          /         p
+          /           = check_box_tag 'pictures[]', pic.id

@@ -16,9 +16,6 @@ $(document).ready(function(){
     console.log(picId + "  " + picUrl);
     $("#pictures").prepend('<div class="col-lg-12">' +
       '<div class="thumbnail"><img src="' + picUrl + '"/>' +
-      '<div class="caption">' +
-      '<input id="pictures_" name="pictures[]" value="' + picId +'" type="checkbox">' +
-      '</div>' +
       '</div></div>');
   };
 
@@ -29,7 +26,7 @@ $(document).ready(function(){
       paramName: "picture[file_name]", // Rails expects the file upload to be something like model[field_name]
       addRemoveLinks: false, // don't show remove links on dropzone itself.
       // previewsContainer: ".dropzone-previews",
-      dictDefaultMessage: '拖拽图片到这里',
+      dictDefaultMessage: "拖拽照片到这里 或者 点击后选择照片",
       dictFileTooBig: '图片上传失败, 尺寸需小于25M',
     });
 

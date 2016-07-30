@@ -9,5 +9,5 @@ Rails.application.routes.draw do
 
   # mount ActionCable.server => '/cable'
 
-  root to: 'visitors#index'
+  root to: 'pictures#index'
 end
