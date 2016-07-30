@@ -19,6 +19,14 @@
 
 one:
   file_name: 0cbd5eec-c8dd-4ef8-af1f-93811c24b480.jpg
+  border_style: white
+  model: NIKON D7000
+  lens: '17-55mm f/2.8'
+  f_number: 5.0
+  focal_length: 30.0 mm
+  exposure_time: 1/1600
+  iso: 200
+
 
 two:
   file_name: c8d2246c-a5e1-4c54-8085-4402edeeeb74.jpg
