@@ -6,6 +6,7 @@
 /tmp
 
 *.swp
+.DS_Store
 
 /public/uploads/*
 /public/assets/*

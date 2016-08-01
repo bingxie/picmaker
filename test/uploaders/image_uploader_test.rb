@@ -7,6 +7,6 @@ class ImageUploaderTest < ActiveSupport::TestCase
   end
 
   test 'extension white list' do
-    assert_equal %w(jpg jpeg gif png), @image_uploader.extension_white_list
+    assert_equal %w(jpg jpeg), @image_uploader.extension_white_list
   end
 end
