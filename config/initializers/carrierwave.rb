@@ -47,19 +47,23 @@ end
 
 module CarrierWave
   module MiniMagick
+    # Add exif border process
     def exif_border
       return if model.exif_string.blank?
       manipulate! do |img|
         basic_point = img.dimensions.min / 60
         basic_point = 12 if basic_point < 12
+        border_height = basic_point * 2
+        text_v_margin = basic_point / 2
+        text_h_margin = basic_point / 2
 
         img.combine_options do |c|
           c.background model.border_style
           c.gravity    'SouthEast'
-          c.splice     "0x#{basic_point * 2}"
-          c.draw       "text #{basic_point / 2},#{basic_point / 2} '#{model.exif_string}'"
+          c.splice     "0x#{border_height}"
+          c.draw       "text #{text_h_margin},#{text_v_margin} '#{model.exif_string}'"
           c.font       'Helvetica'
-          c.fill       model.border_style == 'white' ? 'black' : 'white'
+          c.fill       model.text_color
           c.pointsize  basic_point
         end
         img

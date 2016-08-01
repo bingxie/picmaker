@@ -35,11 +35,19 @@ class PictureTest < ActiveSupport::TestCase
     assert_equal '30mm', @picture.focal_length_s
   end
 
-  test 'exposure_time_s' do
+  test '#exposure_time_s' do
     assert_equal '1/1600s', @picture.exposure_time_s
   end
 
-  test 'iso_s' do
+  test '#iso_s' do
     assert_equal 'ISO200', @picture.iso_s
+  end
+
+  test '#text_color' do
+    @picture.border_style = 'white'
+    assert_equal 'black', @picture.text_color
+
+    @picture.border_style = 'black'
+    assert_equal 'white', @picture.text_color
   end
 end

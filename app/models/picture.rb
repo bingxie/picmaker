@@ -37,4 +37,8 @@ class Picture < ApplicationRecord
   def iso_s
     'ISO' + iso if iso.present?
   end
+
+  def text_color
+    border_style == 'white' ? 'black' : 'white'
+  end
 end
