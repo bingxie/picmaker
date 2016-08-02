@@ -18,6 +18,7 @@ class PicturesControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_response :success
+    assert_equal 'application/json', response.content_type
     picture = response.parsed_body
 
     assert_equal 'black', picture['border_style']
