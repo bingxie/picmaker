@@ -1,0 +1,4 @@
+zh-CN:
+  errors:
+    messages:
+      extension_white_list_error: 只能上传jpg格式的照片
