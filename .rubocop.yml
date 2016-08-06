@@ -20,6 +20,7 @@ Style/Documentation:
     - "app/helpers/**/*_helper.rb"
     - "app/mailers/**/*_mailer.rb"
     - "app/models/**/*"
+    - "app/jobs/**/*"
     - "app/uploaders/**/*"
     - "config/**/*"
     - "db/**/*"

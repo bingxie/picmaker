@@ -8,6 +8,7 @@ class PicturesController < ApplicationController
 
     respond_to do |format|
       if @picture.save
+        DeletePictureJob.set(wait: 30.minutes).perform_later(@picture)
         format.json { render json: @picture }
       else
         format.json { render json: @picture.errors, status: :unprocessable_entity }
