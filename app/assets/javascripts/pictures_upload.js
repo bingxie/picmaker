@@ -26,7 +26,7 @@ $(document).ready(function(){
       paramName: "picture[file_name]", // Rails expects the file upload to be something like model[field_name]
       addRemoveLinks: false, // don't show remove links on dropzone itself.
       // previewsContainer: ".dropzone-previews",
-      dictDefaultMessage: "拖拽照片到这里 或者 点击后选择照片",
+      dictDefaultMessage: "拖拽照片到这里 或者 点击后选择照片(带有EXIF信息的JPG格式)",
       dictFileTooBig: '图片上传失败, 尺寸需小于25M',
     });
 
@@ -45,7 +45,7 @@ $(document).ready(function(){
           }
 
           if(acceptedFiles.length != 0) {
-            alertify.success('成功上传了 ' + acceptedFiles.length + ' 张图片。');
+            alertify.success('成功上传并处理了 ' + acceptedFiles.length + ' 张图片。');
           }
           if(rejectedFiles.length != 0) {
             alertify.error('有 ' + rejectedFiles.length + ' 张图片无法上传。请确认图片格式。');
