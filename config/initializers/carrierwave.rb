@@ -63,7 +63,7 @@ module CarrierWave
           c.gravity    'SouthEast'
           c.splice     "0x#{border_height}"
           c.draw       "text #{text_h_margin},#{text_v_margin} '#{model.exif_string}'"
-          c.font       'Helvetica'
+          c.font       'Lato'
           c.fill       model.text_color
           c.pointsize  basic_point
         end
