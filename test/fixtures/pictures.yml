@@ -22,6 +22,7 @@ one:
   border_style: white
   model: NIKON D7000
   lens: '17-55mm f/2.8'
+  lens_id: 'AF-S DX Nikkor 35mm f/1.8G'
   f_number: 5.0
   focal_length: 30.0 mm
   exposure_time: 1/1600

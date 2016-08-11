@@ -15,6 +15,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     exif = MiniExiftool.new file.file
     model.model = exif.model
     model.lens = exif.lens
+    model.lens_id = exif.lens_id
     model.f_number = exif.f_number
     model.focal_length = exif.focal_length
     model.exposure_time = exif.exposure_time
