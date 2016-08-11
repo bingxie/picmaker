@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  raw_lens: MyString
-  raw_lens_id: MyString
-  custom_lens: MyString
+  raw_lens: '17-55mm f/2.8'
+  raw_lens_id: 'AF-S DX Nikkor 17-55mm f/2.8'
+  custom_lens: 'AF-S DX 17-55mm f/2.8'
 
 two:
-  raw_lens: MyString
-  raw_lens_id: MyString
-  custom_lens: MyString
+  raw_lens: WAIT LENS
+  raw_lens_id:
+  custom_lens:

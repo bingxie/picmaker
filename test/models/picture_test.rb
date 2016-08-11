@@ -48,8 +48,33 @@ class PictureTest < ActiveSupport::TestCase
     assert_equal picture4.model, custom_model
   end
 
+  test '#custom_lens when it already has' do
+    picture2 = pictures(:two)
+    assert_equal 'AF-S DX 17-55mm f/2.8', picture2.custom_lens
+  end
+
+  test '#custom_lens when it is waiting' do
+    picture3 = pictures(:three)
+    custom_lens = ""
+    assert_no_difference 'LensInfo.count' do
+      custom_lens = picture3.custom_lens
+    end
+    assert_equal picture3.lens, custom_lens
+  end
+
+  test '#custom_lens when it is frst one' do
+    picture4 = pictures(:four)
+    custom_lens = ''
+
+    assert_difference 'LensInfo.count' do
+    custom_lens = picture4.custom_lens
+    end
+
+    assert_equal picture4.custom_lens, custom_lens
+  end
+
   test '#exif_string' do
-    expected = 'NIKON D7000   17-55mm f/2.8   F5.0   30mm   1/1600s   ISO200'
+    expected = 'NIKON D7000   AF-S DX 17-55mm f/2.8   F5.0   30mm   1/1600s   ISO200'
     assert_equal expected, @picture.exif_string
   end
 

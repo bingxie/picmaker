@@ -19,7 +19,7 @@ class Picture < ApplicationRecord
   mount_uploader :file_name, ImageUploader
 
   def exif_string
-    [custom_model, lens, f_number_s, focal_length_s, exposure_time_s, iso_s].compact.join('   ')
+    [custom_model, custom_lens, f_number_s, focal_length_s, exposure_time_s, iso_s].compact.join('   ')
   end
 
   def custom_model
@@ -32,6 +32,18 @@ class Picture < ApplicationRecord
     ModelInfo.create(raw_model: model) unless minfo
 
     model
+  end
+
+  def custom_lens
+    return if lens.blank? && lens_id.blank?
+
+    linfo = LensInfo.where(raw_lens: lens.to_s, raw_lens_id: lens_id.to_s).first
+
+    return linfo.custom_lens if linfo && linfo.custom_lens
+
+    LensInfo.create(raw_lens: lens, raw_lens_id: lens_id) unless linfo
+
+    lens
   end
 
   def f_number_s

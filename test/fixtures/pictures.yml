@@ -22,7 +22,7 @@ one:
   border_style: white
   model: NIKON D7000
   lens: '17-55mm f/2.8'
-  lens_id: 'AF-S DX Nikkor 35mm f/1.8G'
+  lens_id: 'AF-S DX Nikkor 17-55mm f/2.8'
   f_number: 5.0
   focal_length: 30.0 mm
   exposure_time: 1/1600
@@ -32,13 +32,16 @@ one:
 two:
   file_name: c8d2246c-a5e1-4c54-8085-4402edeeeb74.jpg
   model: DSLR-A850
-  lens:
+  lens: '17-55mm f/2.8'
+  lens_id: 'AF-S DX Nikkor 17-55mm f/2.8'
 
 three:
   file_name: c8d2246c-a5e1-4c54-8085-4402edeeeb74.jpg
   model: NIKON D800
-  lens:
+  lens: WAIT LENS
 
 four:
   file_name: c8d2246c-a5e1-4c54-8085-4402edeeeb74.jpg
   model: FIRST ONE
+  lens: FIRST LENS
+  lens_id: FIRST LENS ID
