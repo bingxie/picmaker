@@ -29,6 +29,10 @@ gem 'font-awesome-sass'
 gem 'slim-rails'
 gem 'high_voltage', github: 'thoughtbot/high_voltage'
 
+# Rails Admin
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+
 gem 'dropzonejs-rails'
 gem 'alertifyjs-rails'
 gem 'mini_exiftool' # relay on exiftool
@@ -40,7 +44,7 @@ gem 'status-page'
 gem 'redis-namespace'
 gem 'sidekiq'
 gem 'sinatra', github: 'sinatra', require: false
-gem 'kaminari', github: 'amatsuda/kaminari'
+gem 'kaminari', github: "amatsuda/kaminari", branch: '0-17-stable'
 gem 'rails-i18n', '~> 5.0.0'
 gem 'mina-puma', require: false
 gem 'mina-multistage', '~> 1.0', require: false
