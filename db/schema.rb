@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160728053128) do
+ActiveRecord::Schema.define(version: 20160811092954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "lens_infos", force: :cascade do |t|
+    t.string   "raw_lens"
+    t.string   "raw_lens_id"
+    t.string   "custom_lens"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "model_infos", force: :cascade do |t|
+    t.string   "raw_model"
+    t.string   "custom_model"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "pictures", force: :cascade do |t|
     t.string   "file_name"

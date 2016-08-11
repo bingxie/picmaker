@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  raw_model: MyString
+  custom_model: MyString
+
+two:
+  raw_model: MyString
+  custom_model: MyString

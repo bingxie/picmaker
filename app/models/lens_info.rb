@@ -1,0 +1,2 @@
+class LensInfo < ApplicationRecord
+end

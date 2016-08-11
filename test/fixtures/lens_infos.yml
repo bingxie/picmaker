@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  raw_lens: MyString
+  raw_lens_id: MyString
+  custom_lens: MyString
+
+two:
+  raw_lens: MyString
+  raw_lens_id: MyString
+  custom_lens: MyString
