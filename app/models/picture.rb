@@ -40,7 +40,7 @@ class Picture < ApplicationRecord
     params = { raw_lens: lens }
     params[:raw_lens_id] = lens_id if lens_id.present?
 
-    linfo = LensInfo.where(params).first
+    linfo = LensInfo.find_by(params)
 
     return linfo.custom_lens if linfo && linfo.custom_lens
 

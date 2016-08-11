@@ -31,7 +31,7 @@ class PictureTest < ActiveSupport::TestCase
 
   test '#custom_model when it is waiting' do
     picture3 = pictures(:three)
-    custom_model = ""
+    custom_model = ''
     assert_no_difference 'ModelInfo.count' do
       custom_model = picture3.custom_model
     end
@@ -41,7 +41,7 @@ class PictureTest < ActiveSupport::TestCase
   test '#custom_model when it is first one' do
     picture4 = pictures(:four)
 
-    custom_model = ""
+    custom_model = ''
     assert_difference 'ModelInfo.count' do
       custom_model = picture4.custom_model
     end
@@ -55,7 +55,7 @@ class PictureTest < ActiveSupport::TestCase
 
   test '#custom_lens when it is waiting' do
     picture3 = pictures(:three)
-    custom_lens = ""
+    custom_lens = ''
     assert_no_difference 'LensInfo.count' do
       custom_lens = picture3.custom_lens
     end
@@ -67,7 +67,7 @@ class PictureTest < ActiveSupport::TestCase
     custom_lens = ''
 
     assert_difference 'LensInfo.count' do
-    custom_lens = picture4.custom_lens
+      custom_lens = picture4.custom_lens
     end
 
     assert_equal picture4.custom_lens, custom_lens

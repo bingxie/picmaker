@@ -1,5 +1,4 @@
 RailsAdmin.config do |config|
-
   ### Popular gems integration
 
   ## == Devise ==
@@ -23,14 +22,14 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar true
 
-  config.excluded_models << "Picture"
+  config.excluded_models << 'Picture'
 
   config.model 'LensInfo' do
     list do
       field :raw_lens
 
       field :raw_lens_id do
-        label "Raw LensID"
+        label 'Raw LensID'
       end
 
       field :custom_lens
