@@ -30,3 +30,14 @@ one:
 
 two:
   file_name: c8d2246c-a5e1-4c54-8085-4402edeeeb74.jpg
+  model: DSLR-A850
+  lens:
+
+three:
+  file_name: c8d2246c-a5e1-4c54-8085-4402edeeeb74.jpg
+  model: NIKON D800
+  lens:
+
+four:
+  file_name: c8d2246c-a5e1-4c54-8085-4402edeeeb74.jpg
+  model: FIRST ONE

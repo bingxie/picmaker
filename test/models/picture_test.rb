@@ -24,6 +24,30 @@ class PictureTest < ActiveSupport::TestCase
     @picture = pictures(:one)
   end
 
+  test '#custom_model when it already has' do
+    picture2 = pictures(:two)
+    assert_equal 'SONY A850', picture2.custom_model
+  end
+
+  test '#custom_model when it is waiting' do
+    picture3 = pictures(:three)
+    custom_model = ""
+    assert_no_difference 'ModelInfo.count' do
+      custom_model = picture3.custom_model
+    end
+    assert_equal picture3.model, custom_model
+  end
+
+  test '#custom_model when it is first one' do
+    picture4 = pictures(:four)
+
+    custom_model = ""
+    assert_difference 'ModelInfo.count' do
+      custom_model = picture4.custom_model
+    end
+    assert_equal picture4.model, custom_model
+  end
+
   test '#exif_string' do
     expected = 'NIKON D7000   17-55mm f/2.8   F5.0   30mm   1/1600s   ISO200'
     assert_equal expected, @picture.exif_string

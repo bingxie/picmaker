@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  raw_model: MyString
-  custom_model: MyString
+  raw_model: NIKON D7000
+  custom_model: NIKON D7000
 
 two:
-  raw_model: MyString
-  custom_model: MyString
+  raw_model: DSLR-A850
+  custom_model: SONY A850
+
+three:
+  raw_model: NIKON D800
+  custom_model:

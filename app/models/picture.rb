@@ -19,7 +19,19 @@ class Picture < ApplicationRecord
   mount_uploader :file_name, ImageUploader
 
   def exif_string
-    [model, lens, f_number_s, focal_length_s, exposure_time_s, iso_s].compact.join('   ')
+    [custom_model, lens, f_number_s, focal_length_s, exposure_time_s, iso_s].compact.join('   ')
+  end
+
+  def custom_model
+    return if model.blank?
+
+    minfo = ModelInfo.find_by_raw_model(model)
+
+    return minfo.custom_model if minfo && minfo.custom_model
+
+    ModelInfo.create(raw_model: model) unless minfo
+
+    model
   end
 
   def f_number_s
