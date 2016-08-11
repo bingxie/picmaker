@@ -25,13 +25,9 @@ class Picture < ApplicationRecord
   def custom_model
     return if model.blank?
 
-    minfo = ModelInfo.find_by_raw_model(model)
+    minfo = ModelInfo.find_or_create_by(raw_model: model)
 
-    return minfo.custom_model if minfo && minfo.custom_model
-
-    ModelInfo.create(raw_model: model) unless minfo
-
-    model
+    minfo.custom_model || model
   end
 
   def custom_lens
@@ -40,13 +36,9 @@ class Picture < ApplicationRecord
     params = { raw_lens: lens }
     params[:raw_lens_id] = lens_id if lens_id.present?
 
-    linfo = LensInfo.find_by(params)
+    linfo = LensInfo.find_or_create_by(params)
 
-    return linfo.custom_lens if linfo && linfo.custom_lens
-
-    LensInfo.create(raw_lens: lens, raw_lens_id: lens_id) unless linfo
-
-    lens
+    linfo.custom_lens || lens
   end
 
   def f_number_s
