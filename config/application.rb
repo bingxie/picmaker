@@ -15,6 +15,8 @@ module Picmaker
     config.i18n.available_locales = [:en, :'zh-CN']
     config.i18n.default_locale = :'zh-CN'
 
+    config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js']
+
     config.lograge.enabled = true
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
