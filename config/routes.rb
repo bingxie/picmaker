@@ -1,5 +1,6 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/helloadmin', as: 'rails_admin'
   resources :pictures, only: [:create]
 
   # writer your routes here
