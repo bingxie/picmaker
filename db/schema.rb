@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160811115951) do
+ActiveRecord::Schema.define(version: 20160811130947) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160811115951) do
     t.string   "custom_lens"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["raw_lens", "raw_lens_id"], name: "index_lens_infos_on_raw_lens_and_raw_lens_id", unique: true, using: :btree
   end
 
   create_table "model_infos", force: :cascade do |t|
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160811115951) do
     t.string   "custom_model"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.index ["raw_model"], name: "index_model_infos_on_raw_model", unique: true, using: :btree
   end
 
   create_table "pictures", force: :cascade do |t|

@@ -37,7 +37,7 @@ class Picture < ApplicationRecord
   def custom_lens
     return if lens.blank? && lens_id.blank?
 
-    linfo = LensInfo.where(raw_lens: lens.to_s, raw_lens_id: lens_id.to_s).first
+    linfo = LensInfo.where(raw_lens: lens, raw_lens_id: lens_id).first
 
     return linfo.custom_lens if linfo && linfo.custom_lens
 
