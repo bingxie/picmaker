@@ -32,6 +32,7 @@ gem 'high_voltage', github: 'thoughtbot/high_voltage'
 # Rails Admin
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
+gem 'rails_admin-i18n'
 
 gem 'dropzonejs-rails'
 gem 'alertifyjs-rails'

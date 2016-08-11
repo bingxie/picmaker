@@ -264,6 +264,7 @@ GEM
       rails (>= 4.0, < 6)
       remotipart (~> 1.0)
       sass-rails (>= 4.0, < 6)
+    rails_admin-i18n (1.10.3)
     railties (5.0.0)
       actionpack (= 5.0.0)
       activesupport (= 5.0.0)
@@ -399,6 +400,7 @@ DEPENDENCIES
   rails (~> 5.0.0)
   rails-i18n (~> 5.0.0)
   rails_admin (>= 1.0.0.rc)
+  rails_admin-i18n
   redis-namespace
   remotipart!
   rubocop
