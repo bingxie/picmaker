@@ -5,7 +5,7 @@ require 'mina/multistage'
 require 'mina/bundler'
 require 'mina/rails'
 require 'mina/git'
-require 'mina/rbenv'
+require 'mina/rvm'
 require 'mina/puma'
 require 'mina_sidekiq/tasks'
 require 'mina/logs'
@@ -14,7 +14,7 @@ set :shared_paths, ['config/database.yml', 'config/application.yml', 'log', 'pub
 set :puma_config, -> { "#{deploy_to}/#{current_path}/config/puma.rb" }
 
 task :environment do
-  invoke :'rbenv:load'
+  invoke :'rvm:use[ruby-2.3.1@default]'
 end
 
 task setup: :environment do
