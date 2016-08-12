@@ -29,6 +29,8 @@ gem 'font-awesome-sass'
 gem 'slim-rails'
 gem 'high_voltage', github: 'thoughtbot/high_voltage'
 
+gem 'devise'
+
 # Rails Admin
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
