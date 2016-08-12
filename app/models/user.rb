@@ -4,4 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          :confirmable
+
+  ROLES = %i[admin moderator]
+
+  def admin?
+    role && role == 'admin'
+  end
 end

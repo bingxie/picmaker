@@ -91,6 +91,7 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.5)
+    cancancan (1.15.0)
     capybara (2.7.1)
       addressable
       mime-types (>= 1.16)
@@ -378,6 +379,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   byebug
+  cancancan
   capybara
   carrierwave
   carrierwave-qiniu (~> 0.2.1)

@@ -30,6 +30,7 @@ gem 'slim-rails'
 gem 'high_voltage', github: 'thoughtbot/high_voltage'
 
 gem 'devise'
+gem "cancancan"
 
 # Rails Admin
 gem 'remotipart', github: 'mshibuya/remotipart'
