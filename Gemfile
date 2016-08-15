@@ -66,6 +66,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'rubocop', require: false
   gem 'annotate'
+  gem 'letter_opener_web', '~> 1.2.0'
 end
 
 group :test do
