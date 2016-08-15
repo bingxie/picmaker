@@ -15,4 +15,8 @@ class PicturesController < ApplicationController
       end
     end
   end
+
+  def new
+    @picture = Picture.new
+  end
 end
