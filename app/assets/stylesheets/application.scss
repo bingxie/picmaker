@@ -1,5 +1,10 @@
 @import "bootstrap-sprockets";
+
+@import "bootswatch/simplex/variables";
+
 @import "bootstrap";
+
+@import "bootswatch/simplex/bootswatch";
 
 @import "jquery-ui";
 @import "dropzone/dropzone";
