@@ -2,12 +2,22 @@ require 'test_helper'
 
 class PicturesControllerTest < ActionDispatch::IntegrationTest
   include ActionDispatch::TestProcess
+  include Devise::Test::IntegrationHelpers
 
-  test '#index' do
+  test '#new' do
     get root_url
     assert_response :success
 
     assert_includes response.body, '照片信息变水印神器'
+  end
+
+  test '#index' do
+    sign_in users(:one)
+
+    get pictures_path
+
+    assert_response :success
+    assert_includes response.body, 'Log Out'
   end
 
   test 'create picture' do

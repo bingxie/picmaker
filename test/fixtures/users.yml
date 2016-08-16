@@ -7,3 +7,4 @@
 one:
   email: user1@gmail.com
   role: admin
+  confirmed_at: <%= Time.now %>

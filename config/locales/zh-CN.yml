@@ -2,3 +2,9 @@ zh-CN:
   errors:
     messages:
       extension_white_list_error: 只能上传jpg格式的照片
+  simple_form:
+    labels:
+      user:
+        email:  邮箱
+        password: 密码
+        remember_me: 记住我
