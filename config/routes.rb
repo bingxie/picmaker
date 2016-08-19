@@ -1,7 +1,6 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
   devise_for :users
-  mount RailsAdmin::Engine => '/helloadmin', as: 'rails_admin'
 
   resources :pictures, only: [:create, :index]
 
@@ -11,6 +10,10 @@ Rails.application.routes.draw do
   # mount ActionCable.server => '/cable'
 
   root to: 'pictures#new'
+
+  get "/pages/*id" => 'pages#show', as: :page, format: false
+
+  mount RailsAdmin::Engine => '/helloadmin', as: 'rails_admin'
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"

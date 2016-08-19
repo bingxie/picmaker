@@ -8,7 +8,7 @@ class PicturesControllerTest < ActionDispatch::IntegrationTest
     get root_url
     assert_response :success
 
-    assert_includes response.body, '照片信息变水印神器'
+    assert_includes response.body, '分享照片'
   end
 
   test '#index' do
@@ -17,7 +17,7 @@ class PicturesControllerTest < ActionDispatch::IntegrationTest
     get pictures_path
 
     assert_response :success
-    assert_includes response.body, 'Log Out'
+    assert_includes response.body, '退出'
   end
 
   test 'create picture' do
