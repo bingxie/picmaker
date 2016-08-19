@@ -22,6 +22,31 @@ class ImageUploader < CarrierWave::Uploader::Base
     model.iso = exif.iso
   end
 
+  def exif_border
+    return if model.exif_string.blank?
+    result = nil
+    manipulate! do |img|
+      basic_point = img.dimensions.min / 60
+      basic_point = 12 if basic_point < 12
+      border_height = basic_point * 2
+      text_v_margin = basic_point / 2
+      text_h_margin = basic_point / 2
+
+      img.combine_options do |c|
+        c.background model.border_style
+        c.gravity    'SouthEast'
+        c.splice     "0x#{border_height}"
+        c.draw       "text #{text_h_margin},#{text_v_margin} '#{model.exif_string}'"
+        c.font       'Lato-Regular'
+        c.fill       model.text_color
+        c.pointsize  basic_point
+        result = c
+      end
+      img
+    end
+    result
+  end
+
   def extension_white_list
     %w(jpg jpeg)
   end
