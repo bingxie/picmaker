@@ -5,10 +5,10 @@
 # below each fixture, per the syntax in the comments below
 #
 admin:
-  email: admin@gmail.com
+  email: <%= FFaker::Internet.email %>
   role: admin
   confirmed_at: <%= Time.now %>
 
 one:
-  email: user1@gmail.com
+  email: <%= FFaker::Internet.email %>
   confirmed_at: <%= Time.now %>

@@ -58,6 +58,7 @@ gem 'mina-sidekiq', '~> 0.3.1', require: false
 gem 'mina-logs', '>= 0.1.0', require: false
 gem 'lograge'
 gem 'rack-mini-profiler'
+
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
@@ -81,4 +82,5 @@ group :test do
   gem 'poltergeist'
   gem 'phantomjs', require: 'phantomjs/poltergeist'
   gem 'simplecov', :require => false
+  gem 'ffaker'
 end
