@@ -80,4 +80,5 @@ group :test do
   gem 'mocha'
   gem 'poltergeist'
   gem 'phantomjs', require: 'phantomjs/poltergeist'
+  gem 'simplecov', :require => false
 end

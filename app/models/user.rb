@@ -4,8 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  ROLES = %w(admin moderator).freeze
-
   has_many :pictures
 
   def admin?
