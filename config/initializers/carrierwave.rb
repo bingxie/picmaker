@@ -45,10 +45,3 @@ CarrierWave.configure do |config|
     config.root = Rails.root.join('test/fixtures/files')
   end
 end
-
-module CarrierWave
-  module MiniMagick
-    # Add exif border process
-
-  end
-end

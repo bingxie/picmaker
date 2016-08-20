@@ -1,11 +1,9 @@
 .row
-  .col-lg-12
-    .row
-      #pictures.col-lg-12
-        - @pictures.each do |pic|
-          .col-lg-12
-            .thumbnail
-              = image_tag pic.file_name.url
-              .caption
-                p
-                  | discription
+  #pictures.col-lg-12
+    - @pictures.each do |pic|
+      .col-lg-12
+        .thumbnail
+          = image_tag pic.file_name.url
+          .caption
+            p
+              | discription

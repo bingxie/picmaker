@@ -22,15 +22,14 @@ class ImageUploader < CarrierWave::Uploader::Base
     model.iso = exif.iso
   end
 
+  # rubocop:disable MethodLength
   def exif_border
     return if model.exif_string.blank?
     result = nil
     manipulate! do |img|
-      basic_point = img.dimensions.min / 60
-      basic_point = 12 if basic_point < 12
+      basic_point = cal_basic_point(img.dimensions.min)
       border_height = basic_point * 2
-      text_v_margin = basic_point / 2
-      text_h_margin = basic_point / 2
+      text_v_margin = text_h_margin = basic_point / 2
 
       img.combine_options do |c|
         c.background model.border_style
@@ -42,7 +41,6 @@ class ImageUploader < CarrierWave::Uploader::Base
         c.pointsize  basic_point
         result = c
       end
-      img
     end
     result
   end
@@ -60,5 +58,10 @@ class ImageUploader < CarrierWave::Uploader::Base
   def random_filename
     @prefix ||= SecureRandom.uuid.delete('-')
     "#{@prefix}.#{file.extension.downcase}"
+  end
+
+  def cal_basic_point(length)
+    basic_point = length / 60
+    basic_point < 12 ? 12 : basic_point
   end
 end

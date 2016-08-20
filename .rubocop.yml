@@ -28,6 +28,8 @@ Style/Documentation:
 
 LineLength:
   Max: 120
+  Exclude:
+    - "config/initializers/devise.rb"
 
 Style/RedundantSelf:
   Exclude:
@@ -38,6 +40,7 @@ Metrics/AbcSize:
     - "config/initializers/*"
     - "app/controllers/**/*"
     - "app/uploaders/*"
+    - "db/migrate/*"
 
 Style/FrozenStringLiteralComment:
   Enabled: false

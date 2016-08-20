@@ -6,7 +6,6 @@ class ImageUploaderTest < ActiveSupport::TestCase
   setup do
     picture = pictures(:one)
     @image_uploader = ImageUploader.new(picture, :file_name)
-
   end
 
   test 'extension white list' do
@@ -21,7 +20,6 @@ class ImageUploaderTest < ActiveSupport::TestCase
       FileUtils.cp(test_file, @copy_test_file)
 
       @image_uploader.stubs(:cached?).returns(true)
-      @image_uploader.stubs(:url).returns(nil)
       @image_uploader.stubs(:file).returns(CarrierWave::SanitizedFile.new(@copy_test_file))
     end
 
@@ -30,13 +28,20 @@ class ImageUploaderTest < ActiveSupport::TestCase
       FileUtils.rm(@copy_test_file) if File.exist?(@copy_test_file)
     end
 
-    test 'afaf' do
+    test 'adds correct options to process the image' do
       result = @image_uploader.exif_border
       result.args.pop
-      args = Hash[*(result.args)]
+      args = Hash[*result.args]
 
       assert_equal 'SouthEast', args['-gravity']
       assert_equal 'Lato-Regular', args['-font']
+    end
+
+    test 'no exif to put on' do
+      image_uploader = ImageUploader.new(Picture.new, :file_name)
+      result = image_uploader.exif_border
+
+      assert_nil result
     end
   end
 end

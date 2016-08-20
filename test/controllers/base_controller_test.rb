@@ -6,7 +6,7 @@ class BaseController < ApplicationController
   end
 end
 
-class BaseControllerTest  < ActionDispatch::IntegrationTest
+class BaseControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup do

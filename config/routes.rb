@@ -11,11 +11,9 @@ Rails.application.routes.draw do
 
   root to: 'pictures#new'
 
-  get "/pages/*id" => 'pages#show', as: :page, format: false
+  get '/pages/*id' => 'pages#show', as: :page, format: false
 
   mount RailsAdmin::Engine => '/helloadmin', as: 'rails_admin'
 
-  if Rails.env.development?
-    mount LetterOpenerWeb::Engine, at: "/letter_opener"
-  end
+  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 end
