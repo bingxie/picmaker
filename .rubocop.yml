@@ -36,11 +36,7 @@ Style/RedundantSelf:
     - config/initializers/status_page.rb
 
 Metrics/AbcSize:
-  Exclude:
-    - "config/initializers/*"
-    - "app/controllers/**/*"
-    - "app/uploaders/*"
-    - "db/migrate/*"
+  Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false
