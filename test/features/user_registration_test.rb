@@ -12,6 +12,7 @@ class UserRegistrationTest < FeatureTest
 
     within '#new_user' do
       fill_in 'user[email]', with: 'test_user@gmail.com'
+      fill_in 'user[username]', with: 'my_username'
       fill_in 'user[password]', with: 'abcd1234'
 
       click_button '注册'

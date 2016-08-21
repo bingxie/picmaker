@@ -7,8 +7,10 @@
 admin:
   email: <%= FFaker::Internet.email %>
   role: admin
+  username: admin
   confirmed_at: <%= Time.now %>
 
 one:
   email: <%= FFaker::Internet.email %>
   confirmed_at: <%= Time.now %>
+  username: user_one
