@@ -1,0 +1,12 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "jquery-ui";
+@import "dropzone/dropzone";
+@import "alertify";
+@import "alertify/default";
+@import "alertify/bootstrap";
+
+body {
+  font-family: 'Lato', sans-serif;
+}
