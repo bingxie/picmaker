@@ -1,0 +1,23 @@
+.login-form
+  .row
+    .col-sm-6.center-block
+      .header.text-center
+        .header__logo
+          = link_to icon('camera-retro'), '/'
+        h2
+          | 注册成为新用户
+      .form
+        = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = f.error_notification
+          .form-inputs
+            = f.input :email, required: false, autofocus: true
+            = f.input :username, required: false, label: '用户名', placeholder: '仅限字母，数字和下划线'
+            = f.input :password, required: false, placeholder: ("至少#{@minimum_password_length}位" if @minimum_password_length)
+          .form-actions
+            = f.button :submit, "注册", class: 'btn-block'
+        p.terms.text-muted.text-center
+          |  注册成为用户后表明你同意我们的服务条款和隐私约定
+      .bottom.text-center
+        br
+        |  已经注册？
+        = link_to "登录", new_session_path(resource_name)

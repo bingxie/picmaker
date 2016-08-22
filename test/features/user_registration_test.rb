@@ -8,7 +8,11 @@ class UserRegistrationTest < FeatureTest
   test 'user signs up with email and password' do
     visit new_user_registration_path
 
+    refute_content '分享照片'
+
     assert_content '注册成为新用户'
+
+    assert_content '已经注册？登录'
 
     within '#new_user' do
       fill_in 'user[email]', with: 'test_user@gmail.com'

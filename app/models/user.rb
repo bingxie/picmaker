@@ -6,10 +6,10 @@ class User < ApplicationRecord
 
   has_many :pictures
 
-  validates_presence_of :username
-  validates :username, length: { in: 3..20 }
-  validates :username, uniqueness: { case_sensitive: false }
-  validates_format_of :username, with: /\A[a-zA-Z0-9_]*\z/
+  validates :username, presence: true,
+                       length: { in: 3..20 },
+                       uniqueness: { case_sensitive: false },
+                       format: { with: /\A[a-zA-Z0-9_]*\z/ }
 
   validates :email, email: true
 

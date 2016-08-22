@@ -37,11 +37,11 @@ class FeatureTest < ActionDispatch::IntegrationTest
   Capybara.app_host = 'http://127.0.0.1:3001'
 
   def assert_content(content)
-    assert page.has_content?(content), %q(Expected to found "#{content}" in: "#{page.text}")
+    assert page.has_content?(content), "Expected to found #{content} in: #{page.text}"
   end
 
   def refute_content(content)
-    refute page.has_content?(content), %q(Expected not to found "#{content}" in: "#{page.text}")
+    refute page.has_content?(content), "Expected not to found #{content} in: #{page.text}"
   end
 
   # See: https://robots.thoughtbot.com/automatically-wait-for-ajax-with-capybara

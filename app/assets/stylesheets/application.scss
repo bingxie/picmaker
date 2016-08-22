@@ -6,6 +6,9 @@
 
 @import "bootswatch/simplex/bootswatch";
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 @import "jquery-ui";
 @import "dropzone/dropzone";
 @import "alertify";
@@ -13,7 +16,10 @@
 @import "alertify/bootstrap";
 
 @import "pictures_upload";
+@import "devise";
 
 body {
   font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  background-color: #fff
 }

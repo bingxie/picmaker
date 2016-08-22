@@ -1,0 +1,22 @@
+.login-form {
+  margin-top: 60px;
+  .header {
+    .header__logo {
+      font-size: 60px;
+    }
+    margin-bottom: 36px;
+  }
+  .form {
+    .form-actions {
+      margin-top: 30px;
+    }
+    .terms {
+      font-size: 14px;
+      margin: 24px 0
+    }
+  }
+}
+
+.center-block {
+  float: none !important;
+}
