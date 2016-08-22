@@ -33,6 +33,7 @@ gem 'high_voltage', github: 'thoughtbot/high_voltage'
 
 gem 'devise'
 gem "cancancan"
+gem 'email_validator'
 
 # Rails Admin
 gem 'remotipart', github: 'mshibuya/remotipart'
@@ -70,6 +71,7 @@ group :development do
   gem 'rubocop', require: false
   gem 'annotate'
   gem 'letter_opener_web', '~> 1.2.0'
+  gem "rubycritic", :require => false
 end
 
 group :test do

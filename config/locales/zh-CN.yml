@@ -1,4 +1,30 @@
 zh-CN:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              invalid: "请输入正确的邮箱地址"
+              blank: "请输入正确的邮箱地址"
+              taken: '此邮箱已经注册过,尝试登录?'
+            username:
+              too_short:
+                other: 用户名太短（最短为 %{count} 个字符）
+              too_long:
+                other: 用户名太长（最长为 %{count} 个字符）
+              invalid: "只能输入字母数字和下划线"
+            password:
+              blank: "请输入密码"
+              too_short:
+                other: "密码太简单, 请输入至少%{count}位字符"
+              too_long:
+                other: 密码太长（最长为 %{count} 个字符）
+              confirmation: 两次输入的密码不一致
+            current_password:
+              invalid: '你输入的密码不正确'
+            password_confirmation:
+              confirmation: 两次输入的密码不一致
   errors:
     messages:
       extension_white_list_error: 只能上传jpg格式的照片
@@ -8,3 +34,5 @@ zh-CN:
         email:  邮箱
         password: 密码
         remember_me: 记住我
+    error_notification:
+      default_message: 请根据提示修改填写的信息
