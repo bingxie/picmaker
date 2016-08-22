@@ -72,6 +72,10 @@ group :development do
   gem 'annotate'
   gem 'letter_opener_web', '~> 1.2.0'
   gem "rubycritic", :require => false
+
+  # Automatically reload your browser when 'view' files are modified
+  gem "rack-livereload"
+  gem 'guard-livereload', '~> 2.5', require: false
 end
 
 group :test do
