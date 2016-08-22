@@ -14,6 +14,7 @@ zh-CN:
               too_long:
                 other: 用户名太长（最长为 %{count} 个字符）
               invalid: "只能输入字母数字和下划线"
+              taken: '此用户名已被注册过，换一个试试'
             password:
               blank: "请输入密码"
               too_short:

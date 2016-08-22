@@ -36,6 +36,13 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
           <% if current_user %>
+            <%= link_to current_user.username, "#" %>
+          <% else %>
+            <%= link_to "注册", new_user_registration_path %>
+          <% end %>
+        </li>
+        <li>
+          <% if current_user %>
             <%= link_to "退出", destroy_user_session_path, method: :delete %>
           <% else %>
             <%= link_to "登录", new_user_session_path %>
