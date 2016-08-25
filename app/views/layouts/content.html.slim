@@ -13,5 +13,21 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = favicon_link_tag "favicon.png"
   body
+    .flash
+      - if notice
+        = render partial: 'layouts/alert', locals: { alert_type: 'info', message: notice}
+      - if alert
+        = render partial: 'layouts/alert', locals: { alert_type: 'danger', message: alert}
     .container
-      == yield
+      .login-form
+        .row
+          .col-sm-6.center-block
+            .header.text-center
+              .logo
+                = link_to icon('camera-retro'), '/'
+              == yield :form_title
+            .form
+              == yield :form
+            .bottom.text-center
+              br
+              == yield :bottom

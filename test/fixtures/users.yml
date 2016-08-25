@@ -6,11 +6,13 @@
 #
 admin:
   email: <%= FFaker::Internet.email %>
+  encrypted_password: <%= Devise::Encryptor.digest(User, '12345678') %>
   role: admin
   username: admin
   confirmed_at: <%= Time.now %>
 
 one:
   email: <%= FFaker::Internet.email %>
+  encrypted_password: <%= Devise::Encryptor.digest(User, '12345678') %>
   confirmed_at: <%= Time.now %>
   username: user_one

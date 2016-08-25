@@ -14,6 +14,8 @@ class UserRegistrationTest < FeatureTest
 
     assert_content '已经注册？登录'
 
+    assert find_link('登录')
+
     within '#new_user' do
       fill_in 'user[email]', with: 'test_user@gmail.com'
       fill_in 'user[username]', with: 'my_username'

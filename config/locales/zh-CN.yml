@@ -8,6 +8,7 @@ zh-CN:
               invalid: "请输入正确的邮箱地址"
               blank: "请输入正确的邮箱地址"
               taken: '此邮箱已经注册过,尝试登录?'
+              not_found: '没有找到该注册邮箱地址'
             username:
               too_short:
                 other: 用户名太短（最短为 %{count} 个字符）
