@@ -3,11 +3,22 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   process :extract_exif
 
+  process :right_orientation
+
+  process resize_to_limit: [3000, 4000]
+
   process :exif_border
 
   if Rails.env.development?
     def store_dir
       "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    end
+  end
+
+  def right_orientation
+    manipulate! do |img|
+      img.auto_orient
+      img
     end
   end
 
@@ -47,6 +58,10 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   def extension_white_list
     %w(jpg jpeg)
+  end
+
+  def content_type_whitelist
+    /image\//
   end
 
   def filename
