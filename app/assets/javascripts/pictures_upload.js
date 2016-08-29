@@ -41,7 +41,7 @@ $(document).ready(function(){
           for(var index = 0; index < acceptedFiles.length; index++) {
             var file = acceptedFiles[index];
             var response = JSON.parse(file.xhr.response);
-            appendContent(response.file_name.url, response.id);
+            appendContent(response.file_name.border.url, response.id);
           }
 
           if(acceptedFiles.length != 0) {

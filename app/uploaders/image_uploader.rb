@@ -7,12 +7,18 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   process resize_to_limit: [3000, 4000]
 
-  process :exif_border
-
   if Rails.env.development?
     def store_dir
       "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
     end
+  end
+
+  version :border do
+    process :exif_border
+  end
+
+  version :thumb do
+    process resize_to_fill: [400, 600]
   end
 
   def right_orientation
@@ -61,18 +67,18 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def content_type_whitelist
-    /image\//
+    %r{image\/}
   end
 
   def filename
-    random_filename if super.present?
+    "#{secure_token}.#{file.extension.downcase}" if original_filename.present?
   end
 
   private
 
-  def random_filename
-    @prefix ||= SecureRandom.uuid.delete('-')
-    "#{@prefix}.#{file.extension.downcase}"
+  def secure_token
+    var = :"@#{mounted_as}_secure_token"
+    model.instance_variable_get(var) || model.instance_variable_set(var, SecureRandom.uuid.delete('-'))
   end
 
   def cal_basic_point(length)
