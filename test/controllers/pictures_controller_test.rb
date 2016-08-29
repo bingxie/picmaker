@@ -33,6 +33,12 @@ class PicturesControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal 'black', picture['border_style']
     assert_equal '35mm f/1.8', picture['lens']
+    assert_equal 'NIKON D7000', picture['model']
+    assert_equal 'AF-S DX Nikkor 35mm f/1.8G', picture['lens_id']
+    assert_equal '2.8', picture['f_number']
+    assert_equal '35.0 mm', picture['focal_length']
+    assert_equal '1/320', picture['exposure_time']
+    assert_equal '200', picture['iso']
   end
 
   test 'can not upload png file' do
