@@ -9,16 +9,6 @@ gem 'jquery-ui-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
-group :development, :test do
-  gem 'byebug', platform: :mri
-end
-
-group :development do
-  gem 'web-console'
-  gem 'listen', '~> 3.0.5'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pg'
@@ -34,6 +24,7 @@ gem 'high_voltage', github: 'thoughtbot/high_voltage'
 gem 'devise'
 gem "cancancan"
 gem 'email_validator'
+gem 'acts-as-taggable-on', '~> 4.0'
 
 # Rails Admin
 gem 'remotipart', github: 'mshibuya/remotipart'
@@ -61,11 +52,16 @@ gem 'lograge'
 gem 'rack-mini-profiler'
 
 group :development, :test do
+  gem 'byebug', platform: :mri
   gem 'pry-rails'
   gem 'pry-byebug'
 end
 
 group :development do
+  gem 'web-console'
+  gem 'listen', '~> 3.0.5'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rubocop', require: false

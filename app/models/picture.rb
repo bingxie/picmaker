@@ -13,9 +13,13 @@
 #  focal_length  :string
 #  exposure_time :string
 #  iso           :string
+#  lens_id       :string
+#  user_id       :integer
 #
 
 class Picture < ApplicationRecord
+  acts_as_taggable
+
   mount_uploader :file_name, ImageUploader
 
   def exif_string

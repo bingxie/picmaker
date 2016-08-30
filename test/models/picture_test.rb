@@ -13,6 +13,8 @@
 #  focal_length  :string
 #  exposure_time :string
 #  iso           :string
+#  lens_id       :string
+#  user_id       :integer
 #
 
 require 'test_helper'
