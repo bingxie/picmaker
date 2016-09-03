@@ -2,14 +2,14 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :pictures, only: [:create, :index]
+  resources :pictures, only: [:create, :index, :new]
 
   mount Sidekiq::Web => '/sidekiq'
   mount StatusPage::Engine => '/'
 
   # mount ActionCable.server => '/cable'
 
-  root to: 'pictures#new'
+  root to: 'pictures#border'
 
   get '/pages/*id' => 'pages#show', as: :page, format: false
 

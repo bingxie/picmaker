@@ -1,6 +1,8 @@
 class PicturesController < ApplicationController
   skip_before_action :authenticate_user!, except: [:index]
 
+  layout 'content', only: [:new]
+
   def index
     @pictures = current_user.pictures
   end
@@ -19,6 +21,10 @@ class PicturesController < ApplicationController
   end
 
   def new
+    @picture = Picture.new
+  end
+
+  def border
     @picture = Picture.new
   end
 end

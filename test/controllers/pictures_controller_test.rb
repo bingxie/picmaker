@@ -56,7 +56,7 @@ class PicturesControllerTest < ActionDispatch::IntegrationTest
     def test_routes
       assert_routing({ method: 'post', path: '/pictures' }, controller: 'pictures', action: 'create')
 
-      assert_recognizes({ controller: 'pictures', action: 'new' }, '/')
+      assert_recognizes({ controller: 'pictures', action: 'border' }, '/')
     end
   end
 
