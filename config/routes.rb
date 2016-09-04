@@ -2,6 +2,7 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   devise_for :users
 
+  resources :users, only: [:show]
   resources :pictures, only: [:create, :index, :new]
 
   mount Sidekiq::Web => '/sidekiq'
