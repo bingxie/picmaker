@@ -1,0 +1,9 @@
+h2
+  | Profile
+  = @user.username
+
+p
+  = avatar_for(@user)
+
+p
+  = link_to 'Edit', edit_user_path(@user)

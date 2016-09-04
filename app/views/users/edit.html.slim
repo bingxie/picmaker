@@ -1,0 +1,7 @@
+| Edit
+= simple_form_for @user, html: { multipart: true } do |f|
+  = f.input :username
+  = f.input :avatar, as: :file
+
+  = f.button :submit
+

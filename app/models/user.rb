@@ -24,6 +24,11 @@
 #
 
 class User < ApplicationRecord
+  mount_uploader :avatar, AvatarUploader
+
+  validates_integrity_of  :avatar
+  validates_processing_of :avatar
+
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
@@ -33,8 +38,7 @@ class User < ApplicationRecord
 
   validates :username, presence: true,
                        length: { in: 3..20 },
-                       uniqueness: { case_sensitive: false },
-                       format: { with: /\A[a-zA-Z0-9_]*\z/ }
+                       uniqueness: { case_sensitive: false }
 
   validates :email, email: true
 
