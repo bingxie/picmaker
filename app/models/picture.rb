@@ -6,7 +6,7 @@
 #  file_name     :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
-#  border_style  :string           default("black"), not null
+#  border_style  :string
 #  model         :string
 #  lens          :string
 #  f_number      :string
@@ -15,6 +15,7 @@
 #  iso           :string
 #  lens_id       :string
 #  user_id       :integer
+#  place         :string
 #
 
 class Picture < ApplicationRecord

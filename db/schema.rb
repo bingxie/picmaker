@@ -34,9 +34,9 @@ ActiveRecord::Schema.define(version: 20160903121636) do
 
   create_table "pictures", force: :cascade do |t|
     t.string   "file_name"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.string   "border_style",  default: "black", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "border_style"
     t.string   "model"
     t.string   "lens"
     t.string   "f_number"
