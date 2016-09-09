@@ -1,5 +1,5 @@
 class PicturesController < ApplicationController
-  skip_before_action :authenticate_user!, except: [:index]
+  skip_before_action :authenticate_user!, except: [:index, :new]
 
   layout 'content', only: [:new]
 
@@ -12,7 +12,7 @@ class PicturesController < ApplicationController
 
     respond_to do |format|
       if @picture.save
-        DeletePictureJob.set(wait: 30.minutes).perform_later(@picture)
+        DeletePictureJob.set(wait: 30.minutes).perform_later(@picture) if @picture.border_style # TODO: border verison
         format.json { render json: @picture }
       else
         format.json { render json: @picture.errors, status: :unprocessable_entity }

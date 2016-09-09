@@ -33,8 +33,11 @@ zh-CN:
   simple_form:
     labels:
       user:
-        email:  邮箱
+        email: 邮箱
         password: 密码
         remember_me: 记住我
+      picture:
+        place: 地点
+        tag_list: 标签
     error_notification:
       default_message: 请根据提示修改填写的信息

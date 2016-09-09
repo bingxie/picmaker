@@ -1,20 +1,21 @@
 = content_for :title do
   title 上传摄影作品
 
-= content_for :form_title
+= content_for :form_title do
   h2
     | 上传摄影作品
 
-= content_for :form
+= content_for :form do
   .pannel.panel-default
     .panel-body
-      p
-        | Basic Panel
-      a.btn.btn-primary.btn-lg href="#" Mini button
+      = simple_form_for @picture, html: { method: :post, class: 'dropzone' } do |f|
+        / .form-inputs
+        /   = f.input :place, required: false
+        / .form-inputs
+        /   = f.input :tag_list, required: false
+        / .form-actions
+        / = f.button :submit, "发布照片", class: 'btn-block'
 
-      = simple_form_for @picture, html: {multipart: true, class: 'dropzone'} do |f|
-        = f.input :model
-
-= content_for :bottom
+= content_for :bottom do
   br
   |  本月还可以上传9张摄影作品

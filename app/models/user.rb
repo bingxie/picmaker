@@ -38,7 +38,7 @@ class User < ApplicationRecord
   has_many :pictures
 
   validates :username, presence: true,
-                       length: { in: 3..20 },
+                       length: { in: 2..20 },
                        uniqueness: { case_sensitive: false }
 
   validates :email, email: true
