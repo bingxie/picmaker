@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
   if ($('#new_picture').length) {
     var uploading = new Dropzone("#new_picture", {
       // url: "/pictures",
