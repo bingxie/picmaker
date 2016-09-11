@@ -19,7 +19,7 @@ class UserLoginTest < FeatureTest
       click_button '登录'
     end
 
-    assert_content user.username
+    assert_content '登录成功'
     assert_equal root_path, current_path
   end
 

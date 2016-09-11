@@ -38,7 +38,14 @@ class ImageUploaderTest < ActiveSupport::TestCase
     end
 
     test 'no exif to put on' do
-      image_uploader = ImageUploader.new(Picture.new, :file_name)
+      image_uploader = ImageUploader.new(Picture.new(border_style: 'black'), :file_name)
+      result = image_uploader.exif_border
+
+      assert_nil result
+    end
+
+    test 'no border color specified' do
+      image_uploader = ImageUploader.new(Picture.new(iso: '200'), :file_name)
       result = image_uploader.exif_border
 
       assert_nil result

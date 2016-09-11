@@ -58,12 +58,13 @@ group :development, :test do
 end
 
 group :development do
+  gem 'meta_request'
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'better_errors'
-  gem 'binding_of_caller'
+  # gem 'better_errors'
+  # gem 'binding_of_caller'
   gem 'rubocop', require: false
   gem 'annotate'
   gem 'letter_opener_web', '~> 1.2.0'
@@ -75,7 +76,6 @@ group :development do
 end
 
 group :test do
-  gem 'minitest-reporters'
   gem 'capybara'
   gem 'connection_pool'
   gem 'launchy'

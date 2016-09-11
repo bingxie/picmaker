@@ -35,8 +35,11 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li>
+          <a href="/pictures/new"><button type="submit" class="btn btn-default">上传照片</button></a>
+        </li>
+        <li>
           <% if current_user %>
-            <%= link_to avatar_for(current_user, 35), current_user %>
+            <%= link_to avatar_for(current_user, 25), current_user %>
           <% else %>
             <%= link_to "注册", new_user_registration_path %>
           <% end %>

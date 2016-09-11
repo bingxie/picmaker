@@ -41,7 +41,8 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # rubocop:disable MethodLength
   def exif_border
-    return if model.exif_string.blank?
+    return if model.border_style.nil? || model.exif_string.blank?
+
     result = nil
     manipulate! do |img|
       basic_point = cal_basic_point(img.dimensions.min)

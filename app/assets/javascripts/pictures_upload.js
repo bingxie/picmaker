@@ -1,4 +1,6 @@
-$(document).ready(function(){
+Dropzone.autoDiscover = false; // Disabling autoDiscover, otherwise Dropzone will try to attach twice.
+
+$(document).on('turbolinks:load', function(){
   $("#selectable").selectable({
     selected: function(event, ui) {
       if (ui.selected.classList.contains('white')) {
@@ -10,22 +12,18 @@ $(document).ready(function(){
   });
 
   // disable auto discover
-  Dropzone.autoDiscover = false;
-
   var appendContent = function(picUrl, picId) {
-    console.log(picId + "  " + picUrl);
     $("#pictures").prepend('<div class="col-lg-12">' +
       '<div class="thumbnail"><img src="' + picUrl + '"/>' +
       '</div></div>');
   };
 
-  if ($('.dropzone').length) {
-    var dropzone = new Dropzone (".dropzone", {
+  if ($('#border').length) {
+    var dropzone = new Dropzone ("#border", {
       maxFilesize: 25, // set the maximum file size to 25 MB
       acceptedFiles: ".jpeg,.jpg,.png",
       paramName: "picture[file_name]", // Rails expects the file upload to be something like model[field_name]
       addRemoveLinks: false, // don't show remove links on dropzone itself.
-      // previewsContainer: ".dropzone-previews",
       dictDefaultMessage: "拖拽照片到这里 或者 点击后选择照片(带有EXIF信息的JPG格式)",
       dictFileTooBig: '图片上传失败, 尺寸需小于25M',
     });

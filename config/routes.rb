@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: [:show, :edit, :update]
-  resources :pictures, only: [:create, :index, :new]
+  resources :pictures, only: [:create, :index, :new, :edit, :update, :show]
 
   mount Sidekiq::Web => '/sidekiq'
   mount StatusPage::Engine => '/'

@@ -21,6 +21,7 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  username               :string
+#  avatar                 :string
 #
 
 class User < ApplicationRecord
@@ -37,7 +38,7 @@ class User < ApplicationRecord
   has_many :pictures
 
   validates :username, presence: true,
-                       length: { in: 3..20 },
+                       length: { in: 2..20 },
                        uniqueness: { case_sensitive: false }
 
   validates :email, email: true

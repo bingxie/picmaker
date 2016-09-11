@@ -1,0 +1,18 @@
+= content_for :form_title do
+  h2
+    | 完善作品信息
+
+= content_for :form do
+  .pannel.panel-default
+    .panel-body
+      = simple_form_for @picture do |f|
+        .form-inputs
+          = f.input :place, required: false, placeholder: '比如：北京故宫'
+        .form-inputs
+          = f.input :tag_list, required: false, placeholder: '比如：秋天，蓝天，建筑'
+        .form-actions
+        = f.button :submit, "发布照片", class: 'btn-block'
+
+= content_for :bottom do
+  br
+  |  本月还可以上传9张摄影作品

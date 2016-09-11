@@ -1,35 +1,36 @@
-.row
-  .col-lg-12.well
-    h4
-      b 选择喜欢的样式
-    #selectable.row
-      .col-lg-6.black.ui-selected
-        .thumbnail
-          = image_tag 'black-border.png'
-        .caption
-          center
-            h4 黑底白字
-      .col-lg-6.white
-        .thumbnail
-          = image_tag 'white-border.png'
-        .caption.center
-          center
-            h4 白底黑字
+.container
+  .row
+    .col-lg-12.well
+      h4
+        b 选择喜欢的样式
+      #selectable.row
+        .col-lg-6.black.ui-selected
+          .thumbnail
+            = image_tag 'black-border.png'
+          .caption
+            center
+              h4 黑底白字
+        .col-lg-6.white
+          .thumbnail
+            = image_tag 'white-border.png'
+          .caption.center
+            center
+              h4 白底黑字
 
-.row
-  .col-lg-12.well
-    == render 'form'
+  .row
+    .col-lg-12.well
+      == render 'form'
 
-.row
-  .col-lg-12.well
-    h4
-      b 处理完成的照片，点击右键保存（请及时下载，只保留30分钟）
-    .row
-      #pictures.col-lg-12
-        / - @pictures.each do |pic|
-        /   .col-lg-12
-        /     .thumbnail
-        /       = image_tag pic.file_name.url
-        /       .caption
-        /         p
-        /           = check_box_tag 'pictures[]', pic.id
+  .row
+    .col-lg-12.well
+      h4
+        b 处理完成的照片，点击右键保存（请及时下载，只保留30分钟）
+      .row
+        #pictures.col-lg-12
+          / - @pictures.each do |pic|
+          /   .col-lg-12
+          /     .thumbnail
+          /       = image_tag pic.file_name.url
+          /       .caption
+          /         p
+          /           = check_box_tag 'pictures[]', pic.id
