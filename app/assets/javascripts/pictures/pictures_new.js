@@ -18,10 +18,14 @@ $(document).on('turbolinks:load', function(){
       alert("No more files please!");
     });
 
-    // uploading.on('success', function(file, data) {
-    //   file.id = data.id
-    //   file.previewElement.setAttribute('data-id', data.id);
-    //   this.emit("thumbnail", file, data.file_name.thumb.url);
-    // });
+    uploading.on('success', function(file, data) {
+      file.id = data.id;
+      setTimeout(function(){
+        window.location.href = "/pictures/" + data.id + "/edit";
+      }, 2000);
+      // Use server generated thumbnail
+      // file.previewElement.setAttribute('data-id', data.id);
+      // this.emit("thumbnail", file, data.file_name.thumb.url);
+    });
   }
 });

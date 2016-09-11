@@ -1,10 +1,27 @@
 class PicturesController < ApplicationController
-  skip_before_action :authenticate_user!, except: [:index, :new]
+  skip_before_action :authenticate_user!, only: [:border]
+  before_action :set_picture, only: [:edit, :update, :show]
 
-  layout 'content', only: [:new]
+  layout 'content', only: [:new, :edit]
 
   def index
     @pictures = current_user.pictures
+  end
+
+  def edit
+  end
+
+  def show
+  end
+
+  def update
+    picture_params = params.require(:picture).permit(:place, :tag_list)
+
+    if @picture.update(picture_params)
+      redirect_to @picture, notice: '成功发布摄影作品！'
+    else
+      render :edit, alert: '更新作品信息失败。'
+    end
   end
 
   def create
@@ -27,4 +44,9 @@ class PicturesController < ApplicationController
   def border
     @picture = Picture.new
   end
+
+  private
+    def set_picture
+      @picture = Picture.find(params[:id])
+    end
 end

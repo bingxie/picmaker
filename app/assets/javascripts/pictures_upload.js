@@ -1,4 +1,4 @@
-Dropzone.autoDiscover = false;
+Dropzone.autoDiscover = false; // Disabling autoDiscover, otherwise Dropzone will try to attach twice.
 
 $(document).on('turbolinks:load', function(){
   $("#selectable").selectable({

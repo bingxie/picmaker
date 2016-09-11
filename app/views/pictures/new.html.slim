@@ -8,13 +8,7 @@
 = content_for :form do
   .pannel.panel-default
     .panel-body
-      = simple_form_for @picture, html: { method: :post, class: 'dropzone' } do |f|
-        / .form-inputs
-        /   = f.input :place, required: false
-        / .form-inputs
-        /   = f.input :tag_list, required: false
-        / .form-actions
-        / = f.button :submit, "发布照片", class: 'btn-block'
+      = simple_form_for @picture, html: { class: 'dropzone' } do |f|
 
 = content_for :bottom do
   br

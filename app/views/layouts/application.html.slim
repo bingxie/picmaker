@@ -22,5 +22,4 @@ html
             = render partial: 'layouts/alert', locals: { alert_type: 'info', message: notice}
           - if alert
             = render partial: 'layouts/alert', locals: { alert_type: 'warning', message: alert}
-    .container
-      == yield
+    == yield
