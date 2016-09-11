@@ -85,12 +85,6 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.11)
-    better_errors (2.1.1)
-      coderay (>= 1.0.0)
-      erubis (>= 2.6.6)
-      rack (>= 0.9.0)
-    binding_of_caller (0.7.2)
-      debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -98,6 +92,7 @@ GEM
       railties (>= 3.1)
     builder (3.2.2)
     byebug (9.0.5)
+    callsite (0.0.11)
     cancancan (1.15.0)
     capybara (2.8.1)
       addressable
@@ -223,6 +218,10 @@ GEM
     lumberjack (1.0.10)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    meta_request (0.4.0)
+      callsite (~> 0.0, >= 0.0.11)
+      rack-contrib (~> 1.1)
+      railties (>= 3.0.0, < 5.1.0)
     metaclass (0.0.4)
     method_source (0.8.2)
     mime-types (2.4.3)
@@ -286,6 +285,8 @@ GEM
       rest-client (~> 1.7.3)
       ruby-hmac (~> 0.4)
     rack (2.0.1)
+    rack-contrib (1.2.0)
+      rack (>= 0.9.1)
     rack-livereload (0.3.16)
       rack
     rack-mini-profiler (0.10.1)
@@ -465,8 +466,6 @@ DEPENDENCIES
   acts-as-taggable-on (~> 4.0)
   alertifyjs-rails
   annotate
-  better_errors
-  binding_of_caller
   bootstrap-sass
   bootswatch-rails
   byebug
@@ -492,6 +491,7 @@ DEPENDENCIES
   letter_opener_web (~> 1.2.0)
   listen (~> 3.0.5)
   lograge
+  meta_request
   mina-logs (>= 0.1.0)
   mina-multistage (~> 1.0)
   mina-puma
