@@ -63,6 +63,7 @@ class PicturesControllerTest < ActionDispatch::IntegrationTest
   private
 
   def post_picture(file)
+    sign_in users(:one)
     post '/pictures', params: { picture: { border_style: 'black',
                                            file_name: file } },
                       xhr: true
