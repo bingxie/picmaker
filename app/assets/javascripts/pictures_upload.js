@@ -28,12 +28,6 @@ $(document).on('turbolinks:load', function(){
       dictFileTooBig: '图片上传失败, 尺寸需小于25M',
     });
 
-    // dropzone.on('success', function(file, data) {
-    //   file.id = data.id
-    //   file.previewElement.setAttribute('data-id', data.id);
-    //   this.emit("thumbnail", file, data.file_name.thumb.url);
-    // })
-
     dropzone.on('complete', function(files){
       var self = this;
       if (self.getUploadingFiles().length === 0 && self.getQueuedFiles().length === 0) {

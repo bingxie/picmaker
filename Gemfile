@@ -16,6 +16,8 @@ gem 'figaro'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 
+gem 'hashid-rails'
+
 gem 'simple_form'
 gem 'font-awesome-sass'
 gem 'slim-rails'
