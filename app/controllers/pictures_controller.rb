@@ -30,7 +30,7 @@ class PicturesController < ApplicationController
     respond_to do |format|
       if @picture.save
         DeletePictureJob.set(wait: 30.minutes).perform_later(@picture) if @picture.border_style # TODO: border verison
-        format.json { render json: @picture.as_json(methods: [:encoded_id]) }
+        format.json { render json: @picture.as_json(only: [:file_name], methods: [:encoded_id]) }
       else
         format.json { render json: @picture.errors, status: :unprocessable_entity }
       end
