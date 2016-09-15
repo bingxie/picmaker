@@ -21,7 +21,8 @@
 body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
-  background-color: #fff
+  background-color: #fff;
+  padding-top: 90px;
 }
 
 .flash {
@@ -36,3 +37,36 @@ body {
   border-radius: 50%
 }
 
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  .container-fluid {
+    padding: 15px 20px 5px 20px;
+  }
+}
+
+.navbar-fixed-top {
+  border-width: 0;
+}
+
+.navbar-brand {
+  padding: 5px 15px;
+  .fa-camera-retro {
+    font-size: 32px;
+    color: #000;
+  }
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #fff;
+}
+
+@media (min-width: 768px){
+  .navbar-links {
+    margin-left: 20px;
+  }
+  .navbar-right {
+    li a{
+      padding-top: 3px;
+    }
+  }
+}

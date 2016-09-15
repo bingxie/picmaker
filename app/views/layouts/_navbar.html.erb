@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
@@ -7,19 +7,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">分享照片</a>
+      <%= link_to icon('camera-retro'), '/', class: 'navbar-brand' %>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="关键字">
+        </div>
+        <button type="submit" class="btn btn-primary">搜 索</button>
+      </form>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">精选 <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">最新</a></li>
+      <ul class="nav navbar-nav navbar-links">
+        <li class="active"><a href="/">精 选 <span class="sr-only">(current)</span></a></li>
+        <li><a href="/new">最 新</a></li>
+        <li><a href="/collections">相 册</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">... <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">相册</a></li>
-            <li><a href="#">标签</a></li>
-            <li><a href="#">API</a></li>
+            <li><a href="/tags">标签</a></li>
+            <li><a href="/api">API</a></li>
+            <li><a href="/exif">EXIF提取工具</a></li>
             <li class="divider"></li>
             <li><a href="#">常见问题</a></li>
             <li class="divider"></li>
@@ -27,28 +34,27 @@
           </ul>
         </li>
       </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="关键字">
-        </div>
-        <button type="submit" class="btn btn-default">搜索</button>
-      </form>
+
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="/pictures/new"><button type="submit" class="btn btn-default">上传照片</button></a>
-        </li>
+        <% if current_user %>
+          <li>
+            <a href="/pictures/new" class='new'><button type="submit" class="btn btn-default">上传照片</button></a>
+          </li>
+        <% end %>
         <li>
           <% if current_user %>
-            <%= link_to avatar_for(current_user, 25), current_user %>
+            <%= link_to avatar_for(current_user, 35), current_user %>
           <% else %>
-            <%= link_to "注册", new_user_registration_path %>
+            <%= link_to new_user_registration_path do %>
+              <button type="button" class="btn btn-success">注 册</button>
+            <% end %>
           <% end %>
         </li>
         <li>
-          <% if current_user %>
-            <%= link_to "退出", destroy_user_session_path, method: :delete %>
-          <% else %>
-            <%= link_to "登录", new_user_session_path %>
+          <% unless current_user %>
+            <%= link_to new_user_session_path do%>
+              <button type="button" class="btn btn-default">登 录</button>
+            <% end %>
           <% end %>
         </li>
       </ul>
