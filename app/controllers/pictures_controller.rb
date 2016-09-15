@@ -1,5 +1,5 @@
 class PicturesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:border]
+  skip_before_action :authenticate_user!, only: [:exif]
   before_action :set_picture, only: [:edit, :update, :show]
 
   layout 'content', only: [:new, :edit]
@@ -41,12 +41,13 @@ class PicturesController < ApplicationController
     @picture = Picture.new
   end
 
-  def border
+  def exif
     @picture = Picture.new
   end
 
   private
-    def set_picture
-      @picture = Picture.find(params[:id])
-    end
+
+  def set_picture
+    @picture = Picture.find(params[:id])
+  end
 end
