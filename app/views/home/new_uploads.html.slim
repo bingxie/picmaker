@@ -1,2 +1,7 @@
 h1 Home#new_uploads
-p Find me in app/views/home/new_uploads.html.slim
+.row
+  - @pictures.each do |picture|
+    .col-md-4
+      a.thumbnail href='#'
+        = image_tag picture.file_name.thumb.url
+
