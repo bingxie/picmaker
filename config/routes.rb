@@ -1,5 +1,11 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
+  get '/new' => 'home#new_uploads', as: :home_new
+
+  get '/collections' => 'home#collections', as: :home_collections
+
+  root to: 'home#index'
+
   devise_for :users
 
   resources :users, only: [:show, :edit, :update]
@@ -10,7 +16,7 @@ Rails.application.routes.draw do
 
   # mount ActionCable.server => '/cable'
 
-  root to: 'pictures#border'
+  get '/exif' => 'pictures#exif'
 
   get '/pages/*id' => 'pages#show', as: :page, format: false
 

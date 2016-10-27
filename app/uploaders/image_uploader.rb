@@ -7,23 +7,37 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   process resize_to_limit: [3000, 4000]
 
+  process store_dimensions: :default
+
   if Rails.env.development?
     def store_dir
       "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
     end
   end
 
-  version :border do
+  version :border, if: :add_border? do
     process :exif_border
+    process store_dimensions: :border
   end
 
   version :thumb do
-    process resize_to_fill: [400, 600]
+    process resize_to_limit: [400, 600]
+    process store_dimensions: :thumb
   end
 
   def right_orientation
     manipulate! do |img|
       img.auto_orient
+      img
+    end
+  end
+
+  def store_dimensions(version)
+    manipulate! do |img|
+      model.dimensions ||= ""
+      model.dimensions << "&" unless model.dimensions.empty?
+      width, height = img.dimensions
+      model.dimensions << "#{version}=#{width}x#{height}"
       img
     end
   end
@@ -41,8 +55,6 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # rubocop:disable MethodLength
   def exif_border
-    return if model.border_style.nil? || model.exif_string.blank?
-
     result = nil
     manipulate! do |img|
       basic_point = cal_basic_point(img.dimensions.min)
@@ -85,5 +97,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   def cal_basic_point(length)
     basic_point = length / 60
     basic_point < 12 ? 12 : basic_point
+  end
+
+  def add_border?(new_file)
+    model.border_style.present? && model.exif_string.present?
   end
 end

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:edit, :update]
   before_action :check_authorization, only: [:edit, :update]
-  before_action :set_user
+  before_action :find_user, only: [:show, :edit, :update]
 
   def show
   end
@@ -20,17 +20,15 @@ class UsersController < ApplicationController
 
   private
 
-    def check_authorization
-      unless current_user.id == params[:id].to_i
-        redirect_to root_url
-      end
-    end
+  def check_authorization
+    redirect_to root_url unless current_user.encoded_id == params[:id]
+  end
 
-    def set_user
-      @user = User.find(params[:id])
-    end
+  def find_user
+    @user = User.find(params[:id])
+  end
 
-    def user_params
-      params.require(:user).permit(:username, :avatar)
-    end
+  def user_params
+    params.require(:user).permit(:username, :avatar)
+  end
 end

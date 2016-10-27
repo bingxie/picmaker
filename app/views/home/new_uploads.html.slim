@@ -1,0 +1,7 @@
+h1 Home#new_uploads
+.row
+  - @pictures.each do |picture|
+    .col-md-4
+      a.thumbnail href='#'
+        = image_tag picture.file_name.thumb.url
+
