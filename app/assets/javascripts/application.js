@@ -17,4 +17,10 @@
 //= require turbolinks
 //= require dropzone
 //= require alertify
+//= require flexslider.min
+//= require lightbox.min
+//= require masonry.min
+//= require countdown.min
+//= require smooth-scroll.min
+//= require parallax
 //= require_tree .

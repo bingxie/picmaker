@@ -1,12 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 @import "jquery-ui";
 @import "dropzone/dropzone";
 @import "alertify";
 @import "alertify/default";
 @import "alertify/bootstrap";
 
-body {
-  font-family: 'Lato', sans-serif;
-}
+@import "flexslider";
+@import "lightbox.min";
+
+@import "pictures_upload";
+@import "devise";
+@import "theme";

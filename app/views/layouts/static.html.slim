@@ -10,10 +10,11 @@ html
     = content_for?(:head) ? yield(:head) : ''
     = stylesheet_link_tag    'static', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  body
-    .container-fluid
-      p
-        | hello world
+  body.scroll-assist
+    == yield
+    / .container-fluid
+    /   p
+    /     | hello world
 
-    .container
-      == yield
+    / .container
+    /   == yield
