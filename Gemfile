@@ -17,7 +17,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pg'
 gem 'figaro'
 gem 'bootstrap-sass'
-gem 'bootswatch-rails'
 
 gem 'hashid-rails'
 
