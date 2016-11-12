@@ -35,3 +35,15 @@ You also need: Ruby 2.3.1, Rails 5.0 and Postgresql installed.
 
 ## LICENSE
 MIT
+
+
+admin url:
+sidekiq url:
+
+move database.yml.example
+
+install postgres app
+install redis
+
+rails db:create
+
