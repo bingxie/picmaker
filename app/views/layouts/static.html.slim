@@ -11,7 +11,13 @@ html
     = stylesheet_link_tag    'static', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body.scroll-assist
+
+    = render partial: 'layouts/nav'
+
     == yield
+
+    = render partial: 'layouts/footer'
+
     / .container-fluid
     /   p
     /     | hello world
