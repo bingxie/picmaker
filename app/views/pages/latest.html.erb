@@ -1,38 +1,47 @@
-<div class="main-container">	
-	<section class="bg-secondary">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
-                  <h2>创造 + 分享</h2>
-                  <p class="mb40 mb-xs-24">摄影与文艺, &nbsp;你的作品, 让全世界看到<br>免费授权使用的手选佳片</p>
-                  <a class="mb0 btn btn-lg btn-filled" href="#purchase-template">上传你的作品</a>
-              </div>
-          </div>
-          
-      </div>
-  </section>
+<section class="page-title page-title-4 bg-secondary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="uppercase mb0">
+                    <i class="ti-gallery"></i>最新上传</h3>
+            </div>
+            <div class="col-md-6 text-right">
+                <ol class="breadcrumb breadcrumb-2">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li class="active">最新上传</li>
+                </ol>
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
 
-  <section class="projects p0 bg-dark">
-    <div class="row masonry-loader fixed-center">
+<section class="projects p0 bg-dark">
+      <!-- <ul class="filters floating cast-shadow mb0">
+      </ul> -->
+    <div class="row masonry-loader fixed-center fadeOut">
         <div class="col-sm-12 text-center">
             <div class="spinner"></div>
         </div>
     </div>
-    <div class="row masonry masonryFlyIn">
-        <div class="col-md-4 col-sm-6 masonry-item project" data-filter="People">
+    <div class="row masonry masonryFlyIn fadeIn" style="position: relative; height: 1892px;">
+        <div class="col-md-4 col-sm-6 masonry-item project fadeIn" data-filter="People" style="position: absolute; left: 0px; top: 0px;">
             <div class="image-tile inner-title hover-reveal text-center">
-                <a href="/pages/single-photo">
+                <a href="/pages/single-photo.html">
                     <%= image_tag 'project-single-1.jpg', alt: 'pic' %>
-                    <div class="title">
-                        <h5 class="uppercase mb0" style="line-height: 35px;"><a href="/pages/user.html" >凝固的黎明</a></h5>
+                    </a><div class="title"><a href="#">
+                        </a><h5 class="uppercase mb0" style="line-height: 35px;"><a href="#">凝固的黎明</a></h5>
                         <span>People / Life</span>
                     </div>
-                </a>
+                
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 masonry-item project" data-filter="Animals">
+        <div class="col-md-4 col-sm-6 masonry-item project fadeIn" data-filter="Animals" style="position: absolute; left: 436px; top: 0px;">
             <div class="image-tile inner-title hover-reveal text-center">
-                <a href="#">
+                <a href="/pages/single-photo.html">
                     <%= image_tag 'project-single-2.jpg', alt: 'pic' %>
                     <div class="title">
                         <h5 class="uppercase mb0">Lonely Dog</h5>
@@ -41,9 +50,9 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 masonry-item project" data-filter="People">
+        <div class="col-md-4 col-sm-6 masonry-item project fadeIn" data-filter="People" style="position: absolute; left: 873px; top: 0px;">
             <div class="image-tile inner-title hover-reveal text-center">
-                <a href="#">
+                <a href="/pages/single-photo.html">
                     <%= image_tag 'project-single-3.jpg', alt: 'pic' %>
                     <div class="title">
                         <h5 class="uppercase mb0">Pondering Blonde</h5>
@@ -52,9 +61,9 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 masonry-item project" data-filter="Objects">
+        <div class="col-md-4 col-sm-6 masonry-item project fadeIn" data-filter="Objects" style="position: absolute; left: 436px; top: 291px;">
             <div class="image-tile inner-title hover-reveal text-center">
-                <a href="#">
+                <a href="/pages/single-photo.html">
                     <%= image_tag 'project-single-5.jpg', alt: 'pic' %>
                     <div class="title">
                         <h5 class="uppercase mb0">Vintage Typewriter</h5>
@@ -63,9 +72,9 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 masonry-item project" data-filter="Objects">
+        <div class="col-md-4 col-sm-6 masonry-item project fadeIn" data-filter="Objects" style="position: absolute; left: 0px; top: 655px;">
             <div class="image-tile inner-title hover-reveal text-center">
-                <a href="#">
+                <a href="/pages/single-photo.html">
                     <%= image_tag 'project-single-4.jpg', alt: 'pic' %>
                     <div class="title">
                         <h5 class="uppercase mb0">Summer Lovin'</h5>
@@ -74,9 +83,9 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 masonry-item project" data-filter="People">
+        <div class="col-md-4 col-sm-6 masonry-item project fadeIn" data-filter="People" style="position: absolute; left: 873px; top: 655px;">
             <div class="image-tile inner-title hover-reveal text-center">
-                <a href="#">
+                <a href="/pages/single-photo.html">
                     <%= image_tag 'project-single-6.jpg', alt: 'pic' %>
                     <div class="title">
                         <h5 class="uppercase mb0">Thick Fog</h5>
@@ -86,20 +95,20 @@
             </div>
         </div>
         
-        <div class="col-md-4 col-sm-6 masonry-item project" data-filter="People">
+        <div class="col-md-4 col-sm-6 masonry-item project fadeIn" data-filter="People" style="position: absolute; left: 0px; top: 946px;">
             <div class="image-tile inner-title hover-reveal text-center">
-                <a href="#">
+                <a href="/pages/single-photo.html">
                     <%= image_tag 'project-single-1.jpg', alt: 'pic' %>
-                    <div class="title">
-                        <h5 class="uppercase mb0" style="line-height: 35px;">凝固的黎明</a></h5>
+                    </a><div class="title"><a href="#">
+                        </a><h5 class="uppercase mb0" style="line-height: 35px;"><a href="#">凝固的黎明</a></h5>
                         <span>People / Life</span>
                     </div>
-                </a>
+                
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 masonry-item project" data-filter="Animals">
+        <div class="col-md-4 col-sm-6 masonry-item project fadeIn" data-filter="Animals" style="position: absolute; left: 436px; top: 946px;">
             <div class="image-tile inner-title hover-reveal text-center">
-                <a href="#">
+                <a href="/pages/single-photo.html">
                     <%= image_tag 'project-single-2.jpg', alt: 'pic' %>
                     <div class="title">
                         <h5 class="uppercase mb0">Lonely Dog</h5>
@@ -108,9 +117,9 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 masonry-item project" data-filter="People">
+        <div class="col-md-4 col-sm-6 masonry-item project fadeIn" data-filter="People" style="position: absolute; left: 873px; top: 946px;">
             <div class="image-tile inner-title hover-reveal text-center">
-                <a href="#">
+                <a href="/pages/single-photo.html">
                     <%= image_tag 'project-single-3.jpg', alt: 'pic' %>
                     <div class="title">
                         <h5 class="uppercase mb0">Pondering Blonde</h5>
@@ -119,9 +128,9 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 masonry-item project" data-filter="Objects">
+        <div class="col-md-4 col-sm-6 masonry-item project fadeIn" data-filter="Objects" style="position: absolute; left: 436px; top: 1237px;">
             <div class="image-tile inner-title hover-reveal text-center">
-                <a href="#">
+                <a href="/pages/single-photo.html">
                     <%= image_tag 'project-single-5.jpg', alt: 'pic' %>
                     <div class="title">
                         <h5 class="uppercase mb0">Vintage Typewriter</h5>
@@ -130,9 +139,9 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 masonry-item project" data-filter="Objects">
+        <div class="col-md-4 col-sm-6 masonry-item project fadeIn" data-filter="Objects" style="position: absolute; left: 0px; top: 1601px;">
             <div class="image-tile inner-title hover-reveal text-center">
-                <a href="#">
+                <a href="/pages/single-photo.html">
                     <%= image_tag 'project-single-4.jpg', alt: 'pic' %>
                     <div class="title">
                         <h5 class="uppercase mb0">Summer Lovin'</h5>
@@ -141,9 +150,9 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 masonry-item project" data-filter="People">
+        <div class="col-md-4 col-sm-6 masonry-item project fadeIn" data-filter="People" style="position: absolute; left: 873px; top: 1601px;">
             <div class="image-tile inner-title hover-reveal text-center">
-                <a href="#">
+                <a href="/pages/single-photo.html">
                     <%= image_tag 'project-single-6.jpg', alt: 'pic' %>
                     <div class="title">
                         <h5 class="uppercase mb0">Thick Fog</h5>
@@ -152,48 +161,5 @@
                 </a>
             </div>
         </div>
-    </div>
-  </section>
-  <section class="image-bg bg-dark parallax overlay pt120 pb120">
-      <div class="background-image-holder">
-          <img alt="Background Image" class="background-image" src="img/project-single-3.jpg">
-      </div>
-      <div class="container">
-          <div class="row">
-              <div class="col-sm-12 text-center">
-                  <h2 class="uppercase mb8">从前的样子</h2>
-                  <p class="lead mb40">说不完的话，拍不完的片，转瞬而去却依然如初<br>怀旧光影题材主题征集作品中</p>
-                  <a class="btn btn-lg btn-white mb0" href="#">参与项目</a>
-              </div>
-          </div>
-          
-      </div>
-  </section>
-  <section class="bg-secondary">
-    <div class="container">
-        <div class="row v-align-children">
-            <div class="col-md-7 col-sm-6 text-center mb-xs-24">
-                <div class="local-video-container">
-                    <div class="background-image-holder">
-                        <img alt="Background Image" class="background-image" src="img/home3.jpg">
-                    </div>
-                    <video controls="">
-                        <source src="video/video.webm" type="video/webm">
-                            <source src="video/video.mp4" type="video/mp4">
-                                <source src="video/video.ogv" type="video/ogg">
-                    <div class="play-button"></div>
-                </div>
-                
-            </div>
-            <div class="col-md-4 col-md-offset-1 col-sm-5 col-sm-offset-1">
-                <h3>Design that looks less 'theme' and more you.</h3>
-                <p>
-                    Foundry offers you the modularity and ease-of-use of a template with the style and aesthetic of contemporary, bespoke web design.
-                </p>
-            </div>
-        </div>
-    </div>
-  </section>
-</div>
-
-		
+    </div> 
+</section>
