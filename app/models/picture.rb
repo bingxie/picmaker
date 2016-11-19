@@ -23,6 +23,9 @@ class Picture < ApplicationRecord
 
   mount_uploader :file_name, ImageUploader
 
+  belongs_to :user
+  validates :user, presence: true
+
   def exif_string
     [custom_model, custom_lens, f_number_s, focal_length_s, exposure_time_s, iso_s].compact.join('   ')
   end
