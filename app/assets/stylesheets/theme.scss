@@ -53,7 +53,7 @@ $adventure: #91A05C;
 $resume: #13181D;
 
 
-$color-primary: $green;
+$color-primary: $red2;
 $bg-secondary: #f8f8f8;
 $bg-dark: #292929;
 .bg-primary{ background: $color-primary !important; }
@@ -67,7 +67,7 @@ $bg-dark: #292929;
 
 /*!---------- 1. GLOBAL STYLES ----------*/
 
-body{ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 13px; line-height: 24px; font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif; color:#666; overflow-x: hidden; }
+body{ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 14px; line-height: 24px; font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif; color:#666; overflow-x: hidden; }
 body.boxed-layout{ background: #eee; }
 body.boxed-layout .main-container{ background: #fff; }
 body.boxed-layout, .boxed-layout .nav-container, .boxed-layout .main-container, .boxed-layout nav{ max-width: 1366px; margin: 0 auto; left: 0; right: 0; }
@@ -287,7 +287,7 @@ p.lead{ font-size: 16px; font-weight: 400; line-height: 28px; }
 .sub{ font-size: 12px; }
 
 @media all and (max-width: 767px){
-	p.lead{ font-size: 13px; line-height: 24px; }
+	p.lead{ font-size: 14px; line-height: 24px; }
 	p{ font-size: 12px; }
 }
 
@@ -369,7 +369,7 @@ footer{ padding: 72px 0; }
 .btn-icon{ width: 40px; height: 40px; font-size: 20px; min-width: 0; padding: 0; line-height: 38px; }
 .btn-lg{ height: 50px; line-height: 46px; min-width: 200px; }
 .btn-icon.btn-lg{ width: 50px; height: 50px; line-height: 49px; font-size: 24px; min-width: 0; }
-.btn-icon.btn-sm{ width: 30px; height: 30px; line-height: 29px; font-size: 13px; min-width: 0; padding: 0 0 0 1px!important; }
+.btn-icon.btn-sm{ width: 30px; height: 30px; line-height: 29px; font-size: 14px; min-width: 0; padding: 0 0 0 1px!important; }
 .btn-sm{ height: 30px; font-size: 11px; line-height: 27px; min-width: 0; }
 .btn-filled{ background: $color-primary; color: #fff; }
 .btn-white,.image-bg .btn, .image-bg .btn:visited{ color: #fff; border-color: #fff; }
@@ -417,7 +417,7 @@ nav.bg-dark .logo-light{ display: inline; }
 nav.bg-dark .logo-dark{ display: none; }
 
 .has-dropdown{ padding-right: 18px; }
-.has-dropdown:after{ position: absolute; top: 0; right: 0; font-size: 11px; content: "\e64b"; font-family: 'themify'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; }
+.has-dropdown:after{ position: absolute; top: 0; right: 0; font-size: 11px; content: "\f107"; font-family: 'FontAwesome'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; }
 
 .menu{ width: 100%; height: $nav-height; font-family: $heading-font,"Helvetica Neue",Helvetica,Arial,sans-serif; }
 .menu.inline-block{ width: auto; }
@@ -431,7 +431,7 @@ nav.bg-dark .logo-dark{ display: none; }
 .menu > li ul{ width: 200px; padding: 8px 0; background: $bg-dark; position: absolute; z-index: 99; opacity: 0; @include transition(0.3s); @include translateY(10px); visibility: hidden; margin-top: -1px; }
 .menu > li > ul > li{ position: relative; line-height: 24px; width: 100%; vertical-align: top; }
 .menu > li > ul > li i{ display: inline-block; margin-right: 2px; }
-.menu > li > ul > .has-dropdown:after{ color: #fff; top: 5px; right: 24px; content: "\e649"; }
+.menu > li > ul > .has-dropdown:after{ color: #fff; top: 5px; right: 24px; content: "\f105"; }
 .menu > li > ul li a{ color: #fff; height: auto; padding: 6px 24px; }
 
 .menu > li > ul > li > ul{ left: 100%; top: 0; }
@@ -520,7 +520,7 @@ nav .cart-overview a{ height: auto; }
 	.menu li{ line-height: 24px; float: none; display: block; width: 100%; max-width: 100%; }
 	.menu > li ul{ position: relative; width: 100%; opacity: 1; visibility: visible; @include translateY(0px); left: 0; }
 	.menu > li > ul{ position: relative; opacity: 1; visibility: visible; display: none; @include translateY(0px); }
-	.menu > li > ul > .has-dropdown:after{ content: "\e64b"; }
+	.menu > li > ul > .has-dropdown:after{ content: "\f107"; }
 	.menu > li > ul > li > ul{ left: 0; display: none; padding: 0; }
 	.menu > li > ul li a, .mega-menu .title{ padding: 4px 16px; }
 	.has-dropdown .has-dropdown li{ padding-left: 18px; }
@@ -597,7 +597,7 @@ nav.nav-centered.outOfSight .logo{ display: none; }
 
 /*!---------- 8. TOOLTIPS ----------*/
 
-.tooltip{ font-weight: 600; font-size: 13px; }
+.tooltip{ font-weight: 600; font-size: 14px; }
 .tooltip-inner{ border-radius: 0; padding: 9px 24px 12px 24px; }
 
 /*!---------- 9. ALERTS ----------*/
@@ -733,7 +733,7 @@ button[type="submit"] .form-loading{ height: 25px; width: 25px; display: inline-
 .accordion-1 .active .title:hover{ background: $color-primary; }
 
 .accordion-2 .title{ font-size: 16px; font-weight: 500; padding: 16px 0; border-bottom: 1px solid #ccc; @include transition(0.3s); opacity: .7; }
-.accordion-2 .title:before{ content: "\e622"; font-family: 'themify'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; }
+.accordion-2 .title:before{ content: "\e622"; font-family: 'FontAwesome'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; }
 .accordion-2 .active .title{ opacity: 1; }
 .accordion-2 .active .title:before{ content: '\e61a'; }
 .accordion-2 .content p{ padding: 16px 0; }
@@ -974,7 +974,7 @@ button[type="submit"] .form-loading{ height: 25px; width: 25px; display: inline-
 .widget{ margin-bottom: 48px; }
 
 .link-list{ line-height: 32px; }
-.link-list a:after{ content: "\e628"; font-family: 'themify'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; font-size: 11px; display: inline-block; margin-left: 8px; }
+.link-list a:after{ content: "\e628"; font-family: 'FontAwesome'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; font-size: 11px; display: inline-block; margin-left: 8px; }
 
 .widget ul:last-child, .widget p:last-child{ margin-bottom: 0; }
 .widget .title{ @extend .bold-h6; margin-bottom: 12px; }
@@ -998,7 +998,7 @@ button[type="submit"] .form-loading{ height: 25px; width: 25px; display: inline-
 .widget .twitter-feed .slides li{ margin-bottom: 24px; }
 .widget .twitter-feed .slides li:last-child{ margin-bottom: 0; }
 .widget .twitter-feed .slides li:nth-of-type(n+3){ display: none; }
-.widget .twitter-feed .slides li:before{ position: relative; top: 6px; float: left; display: inline-block; margin-right: 8px; color: $bg-dark; content: "\e74b"; font-family: 'themify'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; font-size: 13px; }
+.widget .twitter-feed .slides li:before{ position: relative; top: 6px; float: left; display: inline-block; margin-right: 8px; color: $bg-dark; content: "\e74b"; font-family: 'FontAwesome'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; font-size: 14px; }
 .widget .twitter-feed p{ padding-left: 22px; position: relative; }
 .bg-dark .widget .twitter-feed .slides li:before{ color: #fff; }
 
@@ -1084,7 +1084,7 @@ img{ max-width: 100%; }
 }
 
 .flex-direction-nav a.flex-next{ right: 16px; }
-.flex-direction-nav a.flex-next:before, .flex-direction-nav a.flex-prev:before{ content:  "\e649"; font-family: 'themify'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; font-size: 24px; color: #fff; }
+.flex-direction-nav a.flex-next:before, .flex-direction-nav a.flex-prev:before{ content:  "\f105"; font-family: 'FontAwesome'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; font-size: 24px; color: #fff; }
 .flex-direction-nav a.flex-prev{ left: 16px; }
 .flex-direction-nav a.flex-prev:before{ content: "\e64a"; }
 .flex-direction-nav a{ opacity: 1; text-shadow: none; color: rgba(0,0,0,0); width: 24px; height: 24px; margin: -12px 0 0; }
@@ -1189,9 +1189,9 @@ img{ max-width: 100%; }
 .lb-outerContainer{ background: none; border-radius: 0; }
 .lightbox .lb-image{ border-radius: 0; }
 .lb-data .lb-close,.lb-nav a.lb-next,.lb-nav a.lb-prev{ background: none; }
-.lb-data .lb-close:before,.lb-nav a.lb-next:before,.lb-nav a.lb-prev:before{ content:  "\e646"; font-family: 'themify'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; font-size: 24px; color: #fff; }
+.lb-data .lb-close:before,.lb-nav a.lb-next:before,.lb-nav a.lb-prev:before{ content:  "\e646"; font-family: 'FontAwesome'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; font-size: 24px; color: #fff; }
 .lb-nav a.lb-next:before, .lb-nav a.lb-prev:before{ position: absolute; top: 50%; font-size: 32px; margin-top: -16px; }
-.lb-nav a.lb-next:before{ content: "\e649"; right: 16px; }
+.lb-nav a.lb-next:before{ content: "\f105"; right: 16px; }
 .lb-nav a.lb-prev:before{ content: "\e64a"; left: 16px; }
 
 .flickr-feed li{ width: 25%; padding: 8px; }

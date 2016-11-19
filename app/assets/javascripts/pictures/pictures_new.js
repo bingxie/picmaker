@@ -20,9 +20,9 @@ $(document).on('turbolinks:load', function(){
 
     uploading.on('success', function(file, data) {
       file.id = data.id;
-      setTimeout(function(){
-        window.location.href = "/pictures/" + data.encoded_id + "/edit";
-      }, 2000);
+      // setTimeout(function(){
+      //   window.location.href = "/pictures/" + data.encoded_id + "/edit";
+      // }, 2000);
       // Use server generated thumbnail
       // file.previewElement.setAttribute('data-id', data.id);
       // this.emit("thumbnail", file, data.file_name.thumb.url);
