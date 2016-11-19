@@ -26,7 +26,7 @@ gem 'slim-rails'
 gem 'high_voltage', github: 'thoughtbot/high_voltage'
 
 gem 'devise'
-gem "cancancan"
+gem 'cancancan'
 gem 'email_validator'
 gem 'acts-as-taggable-on', '~> 4.0'
 
@@ -41,12 +41,12 @@ gem 'mini_exiftool' # relay on exiftool
 
 gem 'carrierwave'
 gem 'carrierwave-qiniu', '~> 0.2.1'
-gem "mini_magick"
+gem 'mini_magick'
 gem 'status-page'
 gem 'redis-namespace'
 gem 'sidekiq'
 gem 'sinatra', github: 'sinatra', require: false
-gem 'kaminari', github: "amatsuda/kaminari", branch: '0-17-stable'
+gem 'kaminari', github: 'amatsuda/kaminari', branch: '0-17-stable'
 gem 'rails-i18n', '~> 5.0.0'
 gem 'mina-puma', require: false
 gem 'mina-multistage', '~> 1.0', require: false
@@ -72,10 +72,10 @@ group :development do
   gem 'rubocop', require: false
   gem 'annotate'
   gem 'letter_opener_web', '~> 1.2.0'
-  gem "rubycritic", :require => false
+  gem 'rubycritic', :require => false
 
   # Automatically reload your browser when 'view' files are modified
-  gem "rack-livereload"
+  gem 'rack-livereload'
   gem 'guard-livereload', '~> 2.5', require: false
 end
 
