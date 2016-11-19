@@ -29,6 +29,7 @@ gem 'devise'
 gem 'cancancan'
 gem 'email_validator'
 gem 'acts-as-taggable-on', '~> 4.0'
+gem 'aasm'
 
 # Rails Admin
 gem 'remotipart', github: 'mshibuya/remotipart'
