@@ -1,3 +1,4 @@
+# rubocop:disable BlockLength
 RailsAdmin.config do |config|
   ### Popular gems integration
 
