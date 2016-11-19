@@ -34,8 +34,8 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   def store_dimensions(version)
     manipulate! do |img|
-      model.dimensions ||= ""
-      model.dimensions << "&" unless model.dimensions.empty?
+      model.dimensions ||= ''
+      model.dimensions << '&' unless model.dimensions.empty?
       width, height = img.dimensions
       model.dimensions << "#{version}=#{width}x#{height}"
       img
@@ -99,7 +99,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     basic_point < 12 ? 12 : basic_point
   end
 
-  def add_border?(new_file)
+  def add_border?(_new_file)
     model.border_style.present? && model.exif_string.present?
   end
 end

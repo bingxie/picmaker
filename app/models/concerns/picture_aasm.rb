@@ -9,7 +9,7 @@ module PictureAASM
       state :approved
 
       event :approve do
-        transitions :from => :draft, :to => :approved
+        transitions from: :draft, to: :approved
       end
     end
   end
