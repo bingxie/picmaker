@@ -27,6 +27,8 @@ class PictureTest < ActiveSupport::TestCase
     @picture = pictures(:one)
   end
 
+  should validate_presence_of(:user)
+
   test '#custom_model when it already has' do
     picture = pictures(:two)
     assert_equal 'SONY A850', picture.custom_model

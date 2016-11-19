@@ -26,6 +26,7 @@ class PicturesController < ApplicationController
 
   def create
     @picture = Picture.new(params.require(:picture).permit(:border_style, :file_name)) # sequence is important
+    @picture.user = current_user
 
     respond_to do |format|
       if @picture.save
