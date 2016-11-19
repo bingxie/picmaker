@@ -53,7 +53,7 @@ $adventure: #91A05C;
 $resume: #13181D;
 
 
-$color-primary: $red2;
+$color-primary: $trublu;
 $bg-secondary: #f8f8f8;
 $bg-dark: #292929;
 .bg-primary{ background: $color-primary !important; }
@@ -421,7 +421,7 @@ nav.bg-dark .logo-dark{ display: none; }
 
 .menu{ width: 100%; height: $nav-height; font-family: $heading-font,"Helvetica Neue",Helvetica,Arial,sans-serif; }
 .menu.inline-block{ width: auto; }
-.menu li a{ font-size: 11px; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; color: $bg-dark; opacity: 0.5; @include transition(0.3s); max-width: 100%; white-space: normal; }
+.menu li a{ font-size: 13px; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; color: $bg-dark; opacity: 0.5; @include transition(0.3s); max-width: 100%; white-space: normal; }
 .menu li a:hover{ opacity: 1 !important; }
 .menu > li{ margin-right: 32px; float: left; position: relative; @include transition(0.3s); opacity: 1; }
 .menu > li:last-child{ margin-right: 0; }
