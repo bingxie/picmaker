@@ -13,13 +13,13 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = favicon_link_tag "favicon.png"
   body
-    == render 'layouts/navbar'
-
-    - unless flash.empty?
-      .row
-        .col-lg-12
-          - if notice
-            = render partial: 'layouts/alert', locals: { alert_type: 'info', message: notice}
-          - if alert
-            = render partial: 'layouts/alert', locals: { alert_type: 'warning', message: alert}
-    == yield
+    == render 'layouts/nav'
+    .main-container
+      - unless flash.empty?
+        .row
+          .col-lg-12
+            - if notice
+              = render partial: 'layouts/alert', locals: { alert_type: 'info', message: notice}
+            - if alert
+              = render partial: 'layouts/alert', locals: { alert_type: 'warning', message: alert}
+      == yield

@@ -11,19 +11,10 @@ html
     = stylesheet_link_tag    'static', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body.scroll-assist
-
     = render partial: 'layouts/nav'
-    <div class="main-container">
 
-    == yield
+    .main-container
 
-    = render partial: 'layouts/footer'
+      == yield
 
-    </div>
-
-    / .container-fluid
-    /   p
-    /     | hello world
-
-    / .container
-    /   == yield
+      = render partial: 'layouts/footer'
