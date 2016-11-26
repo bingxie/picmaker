@@ -22,6 +22,7 @@ Style/Documentation:
     - "app/mailers/**/*_mailer.rb"
     - "app/models/**/*"
     - "app/jobs/**/*"
+    - "app/queries/**/*"
     - "app/uploaders/**/*"
     - "config/**/*"
     - "db/**/*"
